@@ -1,0 +1,22 @@
+<h1>Update a lesson</h1>
+
+<form action="/lessons" method="patch" id="edit-lesson">
+  <div class="form-group">
+    <label for="name">Lesson name</label>
+    <input type="text" class="form-control fifty-percent" name="name">
+  </div>
+  <div class="form-group">
+    <label for="number">Lesson number</label>
+    <input type="text" class="form-control ten-percent" name="number">
+  </div>
+  <div class="form-group">
+    <label for="chapter_id">Chapter id</label>
+    <input type="text" class="form-control ten-percent" name="chapter_id">
+  </div>
+  <div class="form-group">
+    <label for="content">Lesson Content</label>
+    <textarea name="content" class="form-control" rows="3" placeholder="Compose..."></textarea>
+  </div>
+ 
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

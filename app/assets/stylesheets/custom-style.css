@@ -1,0 +1,79 @@
+body {
+	color: #555555;
+}
+div.main {
+	padding: 0 5% !important;
+}
+h1 {
+	margin-bottom: .70em;
+	color: #555555;
+}
+.navbar .nav>li>a {
+	padding: 13px 15px 6px 15px;
+	font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #555555;
+	text-decoration: none;
+	font-size: 1em;
+}
+.nav>li>a {
+	display:inline;
+}
+.nav>li>a:hover {
+	background-color: white;
+	color: red;
+}
+li {
+	line-height: 20px;
+}
+a {
+	color: #555555;
+}
+a:hover {
+	color: red;
+	text-decoration: none;
+}
+.nav {
+	list-style: none;
+}
+.nav ul {
+	display: inline;
+}
+#lesson {
+	min-height: 400px;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 15px 20px;
+}
+.footer {
+	margin: 10px auto;
+	text-align: center
+}
+.navbar ul li {
+	display: inline;
+}
+#foot {
+	height: 50px;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 13px;
+	font-size: 12px;
+	background-color: white;
+}
+.menu li {
+	margin-bottom: 8px;
+}
+
+#new-lesson {
+	border: solid 1px #DDDDDD;
+	padding: 20px;
+}
+.fifty-percent {
+	width: 50%;
+}
+.ten-percent {
+	width: 10%;
+}
+company {
+	margin: 0 auto;
+	text-align: center;
+}

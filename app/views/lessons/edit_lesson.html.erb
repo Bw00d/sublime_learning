@@ -1,0 +1,6 @@
+<h1>Choose a lesson to edit</h1>
+<ul class="table_of_contents">
+	<% @lessons.each do |lesson| %>
+		<li><a href="/lessons/<%= lesson.id %>/edit"><%= lesson.number %> <%= lesson.name %></a></li>
+	<% end %>
+</ul>

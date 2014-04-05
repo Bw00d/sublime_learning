@@ -1,0 +1,21 @@
+<footer class="footer">
+	<div class="container">
+		<company>&copy 2014 <a href="#">Some Teaching</a>  Co.</company>
+	</div>
+</footer>
+<div id="foot"class="navbar navbar-fixed-bottom">
+	<div  class="container navbar-inner">
+		<ul class="nav pull-left">
+			<% if @lesson != nil %>
+				<% if @lesson.id > 1 %>
+					<li><a href="/lessons/<%= @lesson.previous.number %>">Previous lesson</a></li>
+				<% end %>
+				<li><a href="/lessons/<%= @lesson.next.number %>">Next lesson</a></li>
+			<% end %>
+			</ul>
+		<ul class="nav pull-right">
+			<li><a href="#">Section Contents</a></li>
+			<li><a href="/table-of-contents">Table of contents</a></li>
+		</ul>
+	</div>
+</div>

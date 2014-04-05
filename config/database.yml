@@ -1,0 +1,18 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sublime_learning_development
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: sublime_learning_test
+
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: sublime_learning_production
+#   pool: 5
+#   username: sublime_learning
+#   password:
