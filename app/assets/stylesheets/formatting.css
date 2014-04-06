@@ -12,7 +12,7 @@
 
 /* margin, padding */
 .indent {
-	margin: 30px;
+	padding-left: 40px;
 }
 .one-space {
 	margin-left: .5em;

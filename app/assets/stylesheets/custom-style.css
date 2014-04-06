@@ -96,7 +96,6 @@ company {
 .main-title {
 	background-color: #2B2B2B;
 	font-size: 2.5em;
-	border: 1px dashed orange;
 }
 .start-button {
 	margin-top: 2%;
@@ -115,5 +114,18 @@ h2 {
 	line-height: 1.1;
 }
 .more-info {
+	padding-top: 20px;
+	font-size: 2em;
 	background-color: #EDECE4;
+	color:;
+}
+.more-info p {
+	font-size: .8em;
+	color: #555555;
+}
+.test {
+	background-color: red;
+}
+a:hover {
+	color: red !important;
 }
