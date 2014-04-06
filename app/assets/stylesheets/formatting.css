@@ -1,0 +1,19 @@
+.center {
+	margin: 0 auto;
+	text-align: center
+}
+ /* width */
+.fifty-percent {
+	width: 50%;
+}
+.ten-percent {
+	width: 10%;
+}
+
+/* margin, padding */
+.indent {
+	margin: 30px;
+}
+.one-space {
+	margin-left: .5em;
+}

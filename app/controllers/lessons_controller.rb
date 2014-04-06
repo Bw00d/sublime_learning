@@ -1,7 +1,11 @@
 class LessonsController < ApplicationController
 
-	def welcome
+	def landing
+		render :layout => "landing"
+	end
 
+	def welcome
+		
 	end
 
 	def index

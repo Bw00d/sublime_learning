@@ -1,4 +1,6 @@
 SublimeLearning::Application.routes.draw do
+
+	root to: 'lessons#landing'
 	match('table-of-contents', {via: :get, to: 'lessons#index'})
 
   match('lessons', 		 	     { via: :get,  to: 'lessons#welcome' })
