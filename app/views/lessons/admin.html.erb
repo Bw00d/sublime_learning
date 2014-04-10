@@ -1,24 +1,48 @@
-<h1>Create a new lesson</h1>
+<div class="row top-div">
+  <h3>Lessons:</h3>
+  <ul>
+    <% @lessons.each do |lesson| %>
+    <li><%= lesson.name %> <span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), {method: 'get'} %> | <%= link_to "delete", "#" %></li></span>
+    <% end %>
+  </ul>
+</div>
+<div class="row">
+  <h3>Create a new lesson</h3>
+</div>
+<div class="row">
+  <form action="/lessons" method="post" id="new-lesson">
+    <div class="row">
+      <div class="form-group medium-13 columns">
+        <label for="name">Lesson name</label><br>
+        <input type="text" class="form-control fifty-percent" name="name" placeholder="Enter lesson name">
+      </div>
+    </div>
 
-<form action="/lessons" method="post" id="new-lesson">
-  <div class="form-group">
-    <label for="name">Lesson name</label>
-    <input type="text" class="form-control fifty-percent" name="name" placeholder="Enter lesson name">
-  </div>
-  <div class="form-group">
-    <label for="number">Lesson number</label>
-    <input type="text" class="form-control ten-percent" name="number" placeholder="Enter number">
-  </div>
-  <div class="form-group">
-    <label for="chapter_id">Chapter id</label>
-    <input type="text" class="form-control ten-percent" name="chapter_id" placeholder="Enter number">
-  </div>
-  <div class="form-group">
-    <label for="content">Lesson Content</label>
-    <textarea name="content" class="form-control" rows="3" placeholder="Compose..."></textarea>
-  </div>
- 
-  <button type="submit" class="btn btn-default">Submit</button>
-  <button href="/lessons/admin/edit" class="btn btn-default pull-right">Edit a lesson</button>
+    <div class="row">
+      <div class="form-group medium-2 columns">
+        <label for="number">Lesson number</label><br>
+        <input type="text" class="form-control ten-percent" name="number" placeholder="Enter number">
+      </div>
+    </div>
 
-</form>
+    <div class="row">
+      <div class="form-group medium-2 columns">
+        <label for="chapter_id">Chapter id</label><br>
+        <input type="text" class="form-control ten-percent" name="chapter_id" placeholder="Enter number">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group medium-12 columns">
+        <label for="content">Lesson Content</label><br>
+        <textarea name="content" class="form-control" rows="3" placeholder="Compose..."></textarea>
+      </div>
+    </div>
+   
+    <div class="row">
+      <button type="submit" class="btn btn-default">Submit</button>
+      <button href="/lessons/admin/edit" class="btn btn-default pull-right">Edit a lesson</button>
+    </div>
+
+  </form>
+</div>

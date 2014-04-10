@@ -1,6 +1,15 @@
-<h1>Table of contents</h1>
-<ul class="table_of_contents">
-	<% @lessons.each do |lesson| %>
-		<li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
-	<% end %>
-</ul>
+<% provide :title, "Lessons" %>
+<div class="row top-div">
+  <h3>Lessons:</h3>
+  <ul>
+    <% @lessons.each do |lesson| %>
+    <li><%= lesson.name %> <span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), {method: 'get'} %> | <%= link_to "delete", "#" %></li></span>
+    <% end %>
+    </ul>
+</div>
+<div class="row">
+  <h3>Create a new lesson</h3>
+</div>
+<div class="row">
+  <%= render 'form' %>
+</div>

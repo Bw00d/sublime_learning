@@ -4,29 +4,15 @@ class LessonsController < ApplicationController
 		render :layout => "landing"
 	end
 
-	def welcome
-		
-	end
-
 	def index
 		@lessons = Lesson.all
+		@lesson = Lesson.new
 		render('lessons/index.html.erb')
 	end
 
 	def show
 		@lesson = Lesson.find(params[:id])
 		render('lessons/show.html.erb')
-	end
-
-	def admin
-		@lesson = nil
-		render('lessons/admin.html.erb')
-	end
-
-	def edit_index
-		@lesson = nil
-		@lessons = Lesson.all
-		render('lessons/edit_lesson.html.erb')
 	end
 
 	def new
@@ -36,10 +22,7 @@ class LessonsController < ApplicationController
 
 	def create
 		@lessons = Lesson.all
-		@lesson = Lesson.new(name: params[:name], 
-												 number: params[:number], 
-												 content: params[:content],
-												 chapter_id: params[:chapter_id])
+		@lesson = Lesson.new(lessons_params)
 		if @lesson.save
 			render('lessons/index.html.erb')
 		else
@@ -54,13 +37,18 @@ class LessonsController < ApplicationController
 
 	def update
 		@lesson = Lesson.find(params[:id])
-		if @lesson.update(name: params[:name], 
-												 number: params[:number], 
-												 content: params[:content],
-												 chapter_id: params{:chapter_id})
-			redirect_to('table-of-contents')
+		if @lesson.update(lessons_params)
+			redirect_to lessons_path
 		else
 			render('lessons/edit.html.erb')
 		end
+	end
+
+private
+	def lessons_params
+    params.require(:lesson).permit(:name,
+                                 :number,
+                                 :chapter_id,
+                                 :content)
 	end
 end

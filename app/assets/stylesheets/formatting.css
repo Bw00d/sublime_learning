@@ -17,3 +17,10 @@
 .one-space {
 	margin-left: .5em;
 }
+.top-div {
+	margin-top: 50px
+}
+.small-links {
+	font-size: .8em;
+	padding-left: 5px;
+}
