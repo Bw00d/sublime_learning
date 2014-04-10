@@ -43,6 +43,14 @@ class LessonsController < ApplicationController
 			render('lessons/edit.html.erb')
 		end
 	end
+	
+
+	def destroy
+		@lesson = Lesson.find(params[:id])
+    @lesson.destroy
+    flash[:notice] = 'Lesson deleted.'
+    redirect_to lessons_path
+	end
 
 private
 	def lessons_params

@@ -3,13 +3,17 @@
   <h3>Lessons:</h3>
   <ul>
     <% @lessons.each do |lesson| %>
-    <li><%= lesson.name %> <span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), {method: 'get'} %> | <%= link_to "delete", "#" %></li></span>
+    <li><%= lesson.name %> <span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), {method: 'get'} %> | <%= link_to "delete", lesson_path(lesson), { confirm: 'You sure?', method: 'delete' } %></li></span>
     <% end %>
     </ul>
+    <hr>
 </div>
+
 <div class="row">
   <h3>Create a new lesson</h3>
 </div>
 <div class="row">
   <%= render 'form' %>
 </div>
+
+<% #TODO fix issue with deleting a lesson.  Appears to be a routes issue. %>
