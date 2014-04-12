@@ -39,13 +39,7 @@ h1 {
 li {
 	line-height: 20px;
 }
-a {
-	color: #555555;
-}
-a:hover {
-	color: red;
-	text-decoration: none;
-}
+
 .nav {
 	list-style: none;
   ul {
@@ -59,6 +53,7 @@ a:hover {
 	padding: 15px 20px;
 	background-color: white;
 	font-size: 1.3em;
+	box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.5);
 }
 .footer {
 	margin: 10px auto;
@@ -120,8 +115,12 @@ h2 {
 		font-size: .8em;
 		color: #555555;
 	}
+	a {
+	color: #008cba;
+	}
 	a:hover {
-	color: red !important;
+		color: red;
+		text-decoration: none;
 	}
 }
 .test {
