@@ -23,12 +23,19 @@
       <%= f.text_area :content, id: "content-field" %>
     </div>
   </div>
-  <!-- <div class="row">
-    <div class="form-group small-3 column">
-      <%#= f.label :code %>
-      <%#= f.text_area :code %>
+  <div class="row">
+    <div class="form-group small-12 column">
+      <%= f.label :editable_code %>
+      <%= f.text_area :editable_code, id: "editable-code-field" %>
     </div>
-  </div> -->
+  </div>
+ <div class="row">
+    <div class="form-group small-12 column">
+      <%= f.label :answer %>
+      <%= f.text_area :answer, id: "answer-field" %>
+    </div>
+  </div>
+ 
 
   <%= f.submit "Save", class:  'button tiny'  %>
 <% end %>

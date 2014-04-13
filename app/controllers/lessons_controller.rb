@@ -57,6 +57,8 @@ private
     params.require(:lesson).permit(:name,
                                  :number,
                                  :chapter_id,
-                                 :content)
+                                 :content,
+                                 :editable_code,
+                                 :answer)
 	end
 end
