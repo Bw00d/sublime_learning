@@ -10,6 +10,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'foundation-rails'
+gem 'redcarpet'
+gem 'mousetrap-rails'
 
 group :development do
   gem 'better_errors'
@@ -23,6 +25,9 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do
