@@ -47,7 +47,7 @@ li {
 	}
 }
 .lesson {
-	margin-top: 50px;
+	margin-top: 45px;
 	min-height: 500px;
 	border: 1px solid #DDDDDD;
 	padding: 15px 20px;
@@ -62,12 +62,20 @@ li {
 .navbar ul li {
 	display: inline;
 }
-#foot {
+#footer {
 	height: 50px;
 	border-top: 1px solid #DDDDDD;
 	padding-top: 13px;
 	font-size: 12px;
-	background-color: white;
+	background-color: LightGray;
+	border-top: solid 1px DarkGray;
+	li {
+		color: white;
+		// display: inline;
+	}
+	a {
+		color: white;
+	}
 }
 .menu li {
 	margin-bottom: 8px;
