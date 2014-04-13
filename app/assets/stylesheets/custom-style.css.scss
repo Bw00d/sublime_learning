@@ -50,7 +50,7 @@ li {
 	margin-top: 45px;
 	min-height: 500px;
 	border: 1px solid #DDDDDD;
-	padding: 15px 20px;
+	padding: 15px 50px;
 	background-color: white;
 	font-size: 1.3em;
 	box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.5);
@@ -136,4 +136,10 @@ h2 {
 }
 .button {
 	font-size: .9em !important;
+}
+#content-field {
+	height:200px;
+}
+.content {
+	margin-top: 20px;
 }

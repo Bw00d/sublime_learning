@@ -1,5 +1,7 @@
-
+<%= provide :title, @lesson.name %>
 <div class="large-9 large-centered columns lesson">
-	<h3 class=""><%= @lesson.name %></h3>
-	<p>I designed this site to help me learn how to better use sublime short cuts.</p>
+	<h3 class="center"><%= @lesson.name %></h3>
+	<div class="content">
+		<%= render 'content' %>
+	</div>
 </div>
