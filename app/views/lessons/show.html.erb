@@ -1,7 +1,10 @@
 <%= provide :title, @lesson.name %>
 <div class="large-9 large-centered columns lesson">
 	<h3 class="center"><%= @lesson.name %></h3>
-	<div class="content">
-		<%= render 'content' %>
+	<div class="content bottom-space">
+		<%= markdown @lesson.content %>
+	</div>
+	<div class="code-block">
+		<%= markdown @lesson.editable_code %>
 	</div>
 </div>
