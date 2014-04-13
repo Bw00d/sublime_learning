@@ -81,6 +81,9 @@ company {
 	background-color: #2B2B2B;
 	color: #E8BF66;
 	padding-top: 70px;
+	textarea {
+		height: 10%;
+	}
 }
 .main-title {
 	background-color: #2B2B2B;
@@ -96,9 +99,6 @@ code {
 	font-weight: normal;
 	background-color: #2B2B2B;
 	line-height: 1.3em;
-}
-h2 {
-	font-family: 'appNormal';
 }
 .more-info {
 	padding-top: 25px;
@@ -123,15 +123,36 @@ h2 {
 	font-size: .9em !important;
 }
 #content-field {
-	height:200px;
+	height: 200px;
+}
+#editable-code-field {
+	height: 200px;
+}
+#answer-field {
+	height: 150px;
 }
 .content {
 	margin-top: 20px;
 }
 .code-block {
-	background-color: #2B2B2B;
+	background-color: #232323;
 	padding: 10px 20px;
 	font-size: .8em;
+}
+.edit-code {
+	padding: 10px 20px;
+	font-size: .8em;
+	margin-top: 25px;
+	textarea {
+		padding: 10px 20px;
+		font-size: 1em;
+		width: 110%;
+		background-color: #232323;
+		margin: 0 0 0 -35px;
+		height: 150px;
+		color: white;
+		border: none;
+	}
 }
 /*  footer  */
 .footer {

@@ -1,0 +1,10 @@
+<%= form_for @lesson do |f| %>
+  
+  <div class="row">
+    <div class="form-group small-12 column">
+      <%= markdown f.text_area :editable_code, id: "edit-code-field" %>
+    </div>
+  </div>
+ 
+  <%= f.submit "Submit", class:  'button tiny'  %>
+<% end %>

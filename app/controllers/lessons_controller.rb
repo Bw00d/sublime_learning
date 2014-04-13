@@ -38,7 +38,7 @@ class LessonsController < ApplicationController
 	def update
 		@lesson = Lesson.find(params[:id])
 		if @lesson.update(lessons_params)
-			redirect_to lessons_path
+			redirect_to lesson_path(@lesson)
 		else
 			render('lessons/edit.html.erb')
 		end
