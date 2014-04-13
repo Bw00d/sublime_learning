@@ -6,9 +6,19 @@ describe "Pages" do
 
 	describe "Home page" do
 		before { visit root_path }
+		before { create(:lesson) }
 
-		# it { should have_selector()}
 		it { should have_title "Sublime Learning" }
-	end
+		it { should have_link "Get started" }
+		it { should have_link "Sublime Text" }
+		it { should have_link "Github" }
 
+		describe 'clicking links' do
+			before { Lesson.create(name: 'Foo', number: 1) }
+			it 'should visit the correct page' do
+				click_link "Get started"
+				expect(page).to have_title "Lesson one | Sublime Learning"
+			end
+		end
+	end
 end
