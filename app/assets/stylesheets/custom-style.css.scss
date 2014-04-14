@@ -20,7 +20,10 @@ h1 {
 .heading {
 	color: white;
 	font-size: 1.3em;
-	margin-top: 10px;
+	margin: 10px 0 0 43% !important;
+}
+.right-links {
+	margin: 15px 13% 0 0;
 }
 .navbar .nav>li>a {
 	padding: 13px 15px 6px 15px;
@@ -44,6 +47,11 @@ li {
 	list-style: none;
   ul {
 	display: inline;
+	}
+}
+#right-links {
+	li {
+	float: right;
 	}
 }
 
@@ -146,7 +154,7 @@ code {
 	textarea {
 		padding: 10px 20px;
 		font-size: 1em;
-		width: 110%;
+		width: 109.5%;
 		background-color: #232323;
 		margin: 0 0 0 -35px;
 		height: 150px;
