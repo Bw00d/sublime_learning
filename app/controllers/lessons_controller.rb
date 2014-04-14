@@ -26,7 +26,7 @@ class LessonsController < ApplicationController
 		if @lesson.save
 			render('lessons/index.html.erb')
 		else
-			render('lessons/admin.html.erb')
+			render('lessons/new.html.erb')
 		end
 	end
 
