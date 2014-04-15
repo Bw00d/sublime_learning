@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'foundation-rails'
 gem 'redcarpet'
 gem 'mousetrap-rails'
+gem 'bcrypt'
 
 group :development do
   gem 'better_errors'
