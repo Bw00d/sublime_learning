@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 			redirect_to lessons_path, notice: "You have created a new user"
 		else
 			redirect_to :back
+		end
 	end
 
 
