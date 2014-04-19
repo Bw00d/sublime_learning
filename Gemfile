@@ -13,6 +13,7 @@ gem 'foundation-rails'
 gem 'redcarpet'
 gem 'mousetrap-rails'
 gem 'bcrypt'
+gem 'ace-rails-ap'
 
 group :development do
   gem 'better_errors'

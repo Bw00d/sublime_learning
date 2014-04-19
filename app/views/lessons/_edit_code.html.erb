@@ -1,10 +1,11 @@
-<%= form_for @lesson do |f| %>
-  
-  <div class="row">
-    <div class="form-group small-12 column">
-      <%= markdown f.text_area :editable_code, id: "edit-code-field" %>
-    </div>
-  </div>
+ <div class="edit-code">
+ <pre>
+ 	```
+			def change_this_method
+			  puts "This should be the second"
+			  puts "This should be the first line"
+			end
+	```
+	</pre>
+</div>
  
-  <%= f.submit "Submit", class:  'button tiny'  %>
-<% end %>
