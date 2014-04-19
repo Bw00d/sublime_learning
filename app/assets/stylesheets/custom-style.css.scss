@@ -91,10 +91,10 @@ company {
 }
 .main-page {
 	/*width: 100%;*/
-	height: 380px;
+	height: 54%;
 	background-color: #2B2B2B;
 	color: #E8BF66;
-	padding-top: 70px;
+	padding-top: 8%;
 	textarea {
 		height: 10%;
 	}
@@ -102,12 +102,14 @@ company {
 .main-title {
 	background-color: #2B2B2B;
 	font-size: 2.5em;
+	padding-left: 5%;
 }
 .start-button {
-	margin-top: 4%;
+	margin-top: 2%;
  	font-size: 1.5em;
 	width: 500px;
 	text-align: center;
+	position: relative;
 }
 code {
 	font-weight: normal;
@@ -188,6 +190,9 @@ code {
 	margin-bottom: 15px;
 	line-height: 1.5em;
 	overflow-x: hidden;
+}
+.tight-bottom {
+	margin-bottom: -10px;
 }
 
 
