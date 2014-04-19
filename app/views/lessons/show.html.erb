@@ -5,31 +5,21 @@
 	<div class="content bottom-space">
 		<%= markdown @lesson.content %>
 	</div>
-<!-- 	<div class="code-block">
-		<%= markdown @lesson.editable_code %>
-	</div> -->
 
 	<div class="ace-bock">
-		<div id="editor">
-	def change_this_code
-	  puts "This should be second"
-	  puts "This line should be first"
-	end
-	  </div>
-	  <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+		<div id="editor"><%= render 'markdown' %></div>
+
+	  <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8">
+	  </script>
+
 	  <script>
 	      var editor = ace.edit("editor");
 	      editor.getSession().setUseWorker(false);
 	      editor.setTheme("ace/theme/idle_fingers");
 	      editor.getSession().setMode("ace/mode/ruby");
 	      editor.gotoLine(4);
+	      editor.getSession().setTabSize(2);
 	  </script>
 	</div>
-	       <!-- error-messages -->
-
-         <!-- end error messages -->
-        <button type="submit" class="btn btn-primary">submit</button>
-      </form>
-	</div>
-
+  <button id="editor-button" type="submit" class="btn btn-primary">submit</button>
 </div>
