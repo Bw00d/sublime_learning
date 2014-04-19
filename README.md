@@ -1,6 +1,6 @@
 ##Sublime Learning in Rails!
 
-###Epicodus bootcamp build anything you want eexercise
+###Epicodus bootcamp build anything you want exercise
 
 The objective of this exercise is to build an application that will help you practice Sublime Text 2 keyboard shortcuts. Some of the functionality is well beyond my abilities but I will approach it agilely and add complicated functionality as I figure it out.
 
