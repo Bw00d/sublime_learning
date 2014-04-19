@@ -13,6 +13,6 @@ The objective of this exercise is to build an application that will help you pra
 ####Todo
 
 * The ace editor claims to have fully customizable key-binding and I am researching how to add the Sublime Text key-bindings to my app.
-* I will bw using the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
+* I plan to use the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
 
 
