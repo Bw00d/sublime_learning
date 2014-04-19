@@ -2,7 +2,7 @@
 
 ###Epicodus bootcamp build anything you want exercise
 
-The objective of this exercise is to build an application that will help you practice Sublime Text 2 keyboard shortcuts. 
+The objective of this exercise is to build an application for practicing Sublime Text 2 keyboard shortcuts. 
 
 ####Status
 
