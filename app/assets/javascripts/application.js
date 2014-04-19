@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require mousetrap
+//= require mousetrap/global
+//= require mousetrap/dictionary
 //= require foundation
 //= require_tree .
 

@@ -7,7 +7,7 @@
 	</div>
 
 	<div class="ace-bock">
-		<div id="editor"><%= render 'markdown' %></div>
+		<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
 
 	  <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8">
 	  </script>
@@ -17,9 +17,21 @@
 	      editor.getSession().setUseWorker(false);
 	      editor.setTheme("ace/theme/idle_fingers");
 	      editor.getSession().setMode("ace/mode/ruby");
-	      editor.gotoLine(4);
+	      editor.gotoLine(5);
 	      editor.getSession().setTabSize(2);
+
+	      editor.commands.addCommand({
+		    name: 'myCommand',
+		    bindKey: { mac: 'Ctrl-Command-Up'},
+		    exec: function(editor) {
+		        moveLinesUp()
+		    },
+		    readOnly: false // false if this command should not apply in readOnly mode
+		});
+		    
 	  </script>
 	</div>
   <button id="editor-button" type="submit" class="btn btn-primary">submit</button>
 </div>
+	<!-- { "keys": [""], "command": "swap_line_up" },
+	{ "keys": [""], "command": "swap_line_down" }, -->
