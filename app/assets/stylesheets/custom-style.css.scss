@@ -199,7 +199,7 @@ code {
 /*  footer  */
 .footer {
 	margin: 10px auto;
-	text-align: center
+	text-align: center;
 }
 .navbar ul li {
 	display: inline;
@@ -210,14 +210,14 @@ code {
 	border-top: 1px solid #DDDDDD;
 	padding-top: 13px;
 	font-size: 12px;
-	background-color: LightGray;
-	border-top: solid 1px DarkGray;
+	background-color: #e1e1e1;
+	border-top: solid 1px #878787;
 	li {
 		color: white;
 		// display: inline;
 	}
 	a {
-		color: white;
+		color: #878787;
 	}
 }
 
