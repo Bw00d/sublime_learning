@@ -1,6 +1,6 @@
 <div class="main-page">
 	<div class="row">
-		<div class="large-12 columns main-title">
+		<div class="small-12 columns main-title">
 			<code class="orange">def</code>
 			<code class="one-space">be_a_keyboard_ninja</code><br>
 			<code class="indent white">puts </code> <code class="string">"Learn Sublime Text Shorcuts!"</code><br>
@@ -8,22 +8,21 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="medium-4 columns"></div>
-		<div class="medium-4 medium-centered columns start-button">
-			<a href="lessons/1" class="button center">Get started</a>
+		<div class="small-4 small-centered columns start-button">
+			<!-- <a href="lessons/1" class="button center">Get started</a> -->
+			<%= link_to "Get Started", lessons_path(1), class: "button center" %>
 		</div>
-				<div class="medium-4 columns"></div>
 	</div>
 </div>
 <div class="more-info">
 	<div class="row">
-		<div class="medium-12 medium-centered columns">
+		<div class="small-12 small-centered columns">
 			<p>This is a resource to help you gain fluency with <a href="http://www.sublimetext.com/">Sublime Text</a> keyboard shortcuts and bring more joy to your coding experience.</p>
 			<p class="tight-bottom">It is a work in progress and does yet not include all the wonderful shortcuts built into Sublime. This project is open source so if you would like to contribute feel free to fork it on <a href="https://github.com/Bw00d/sublime_learning">Github</a>.</p>
 		</div>
 	</div>
 	<div class="row">
-		<div class="medium-1 medium-centered columns">
+		<div class="small-1 small-centered columns">
 			<p><%= image_tag "octocat-pinkface.png" %></p>
 		</div>
 	</div>
