@@ -1,16 +1,18 @@
 ##Sublime Learning in Rails!
 
-###Epicodus bootcamp build anything you want eexercise
+###Epicodus bootcamp build anything you want exercise
 
-The objective of this exercise is to build an application that will help you practice Sublime Text 2 keyboard shortcuts. Some of the functionality is well beyond my abilities but I will approach it agilely and add complicated functionality as I figure it out.
+The objective of this exercise is to build an application for practicing Sublime Text 2 keyboard shortcuts. 
 
-My objectives:
+####Status
 
-* First, work on CRUD/L functionality for lessons. A lesson has a name and some text content and a lesson number. This will include an admin page for creating lessons.
+* I am able to create lessons.  Each lesson has a name, chapter id, content - which is inputted as markdown and retrieved with the <a href="https://github.com/vmg/redcarpet">redcarpet</a> gem so it can be styled, an editable code block -  also markdown, and an answer code block which will be used to compare the result of the user input.
+* The <a heref="">ace editor</a> is embedded and will allow the user to practice editing the editable code block.
 
-* Next, the lessons need to be viewed sequentially. When you click Next lesson at the bottom of the page, it goes to the lesson with the next-highest number.
 
-* Then, the lessons need to be grouped by category. For example, Delete: 1 Delete line, 2 Delete to end of line, 3 Delete to beginning of line.
+####Todo
 
-* Of course we will use test driven development throughout.
+* The ace editor claims to have fully customizable key-binding and I am researching how to add the Sublime Text key-bindings to my app.
+* I plan to use the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
+
 
