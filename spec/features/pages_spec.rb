@@ -1,24 +1,23 @@
 require 'spec_helper'
-
-describe "Pages" do
 	
+feature "Homepage" do
+
+	before { visit root_url }
 	subject { page }
 
-	describe "Home page" do
-		before { visit root_path }
-		before { create(:lesson) }
 
-		it { should have_title "Sublime Learning" }
-		it { should have_link "Get started" }
-		it { should have_link "Sublime Text" }
-		it { should have_link "Github" }
+  it { should have_title "Sublime Learning" }
+  it { should have_link "Get Started" }
+	it { should have_link "Sublime Text" }
+	it { should have_link "Github" }
 
-		# describe 'clicking links' do
-		# 	before { Lesson.create(name: 'Foo', id: 1) }
-		# 	it 'should visit the correct page' do
-		# 		click_link "Get started"
-		# 		expect(page).to have_title "Sublime Learning | Foo"
-		# 	end
-		# end
+	describe 'clicking links' do
+		it 'should visit the correct page' do
+		  lesson = Lesson.new(name: "Foo")
+		  lesson.save 
+		  p lesson
+			click_link "Get Started"
+			expect(page).to have_title "Sublime Learning | #{lesson.name}"
+		end
 	end
 end
