@@ -1,6 +1,8 @@
 class LessonsController < ApplicationController
 
 	def landing
+		@lessons = Lesson.all
+		@lesson = @lessons.first
 		render :layout => "landing"
 	end
 
