@@ -57,6 +57,9 @@ private
                                  :chapter_id,
                                  :content,
                                  :editable_code,
-                                 :answer)
+                                 :answer,
+                                 :content2,
+                                 :editable_code2,
+                                 :answer2)
 	end
 end
