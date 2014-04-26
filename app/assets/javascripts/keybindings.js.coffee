@@ -56,3 +56,8 @@ handleKeyBindings = ->
     'ctrl+super+up': -> moveLinesUp()
     'ctrl+super+down': -> moveLinesDown()
 
+recordSequence = () ->
+  Mousetrap.record (sequence) ->
+    # sequence is an array like ['ctrl+k', 'c']
+    alert('You pressed: ' + sequence.join(' '))
+
