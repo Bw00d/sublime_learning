@@ -9,9 +9,9 @@ $(document).ready(function() {
 		console.log(input);
 		result = answer.localeCompare(input);
 		if (result == 0 ) {
-			alert("That's correct")
+			$('#notice-correct').show();
 		} else {
-			alert("Try again")
+			$('#alert-wrong').show();
 		}
 	});
 	$('#reset-button').click( function() {
@@ -32,9 +32,11 @@ $(document).ready(function() {
 		result = answer.localeCompare(input);
 		$('#editor-button2').val('Reset');
 		if (result == 0 ) {
-			alert("That's correct")
+			$('#notice-correct2').show();
+			$('#next').removeClass('inactive');
+			$('#next').addClass('active');
 		} else {
-			alert("Try again")
+			$('#alert-wrong2').show();
 		}
 	});
 	$('#reset-button2').click( function() {

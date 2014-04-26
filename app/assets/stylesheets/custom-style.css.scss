@@ -239,4 +239,33 @@ code {
 #reset-button2 {
 	display: none;
 }
+#notice-correct {
+	display: none;
+	background-color: #00CC00;
+}
+#alert-wrong {
+	display: none;
+	background-color: #FF0000;
+}
+#notice-correct2 {
+	display: none;
+	background-color: #00CC00;
+}
+#alert-wrong2 {
+	display: none;
+	background-color: #FF0000;
+}
+#next {
+	// margin-left: 40%;
+	float: right;
+}
+.active {
+	color: white;
+	background-color: #FF66FF;
+}
+.inactive {
+	background-color: #99FFFF;
+	color: white;
+}
+
 
