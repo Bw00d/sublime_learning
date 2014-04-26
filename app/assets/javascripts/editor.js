@@ -30,14 +30,15 @@ editor.getSession().on('change', function(e) {
 
 $(document).ready(function() {
 	$('#editor-button').click(function() {
-		input = editor.getValue();
-		answer = $('#answer-block').html();
+		input = editor.getValue().trim();
+		answer = $('#answer-block').html().trim();
 		console.log(answer)
 		console.log(input)
-		if (input == answer) {
-			alert("Thats correct")
+		result = answer.localeCompare(input);
+		if (result == 0 ) {
+			alert("That's correct")
 		} else {
-			alert('Try again')
+			alert("Try again")
 		}
 	});
 });
