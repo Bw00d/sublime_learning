@@ -17,3 +17,22 @@ editor2.commands.addCommand({
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
+editor2.commands.addCommand({
+	name: 'add_line_down',
+	bindKey: { mac: 'Command-Return'},
+	exec: function(editor2) {
+	     editor2.navigateLineEnd()
+	     editor2.splitLine();
+	     editor2.navigateDown(1);
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
+editor2.commands.addCommand({
+	name: 'add_line_above',
+	bindKey: { mac: 'Shift-Command-Return'},
+	exec: function(editor2) {
+	      editor2.navigateLineStart()
+	     editor2.splitLine();
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
