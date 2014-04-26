@@ -11,7 +11,18 @@
 	</div>
 
   <button id="editor-button" type="submit" class="btn btn-primary">submit</button>
-</div>
 	<p id="answer-block">
 		<%= @lesson.answer %>
 	</p>
+
+	<div class="content bottom-space">
+		<%= markdown @lesson.content %>
+	</div>
+
+	<div class="ace-bock">
+		<div id="editor2" class="mousetrap"><%= @lesson.editable_code %></div>
+	</div>
+
+  <button id="editor-button2" type="submit" class="btn btn-primary">submit</button>
+ </div>
+</div>
