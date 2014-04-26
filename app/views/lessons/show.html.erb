@@ -8,6 +8,9 @@
 	<p id="answer-block">
 		<%= @lesson.answer %>
 	</p>
+<p id="answer-block2">
+		<%= @lesson.answer2 %>
+	</p>
 
 <!-- first editor =========================================================== -->
 	<div class="ace-bock">
@@ -25,12 +28,12 @@
 
 
 	<div class="content bottom-space">
-		<%= markdown @lesson.content %>
+		<%= markdown @lesson.content2 %>
 	</div>
 	
 <!-- second editor =================== -->
 	<div class="ace-bock">
-		<div id="editor2" class="mousetrap"><%= @lesson.editable_code %></div>
+		<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
 	</div>
 
   <button id="editor-button2" type="submit" class="">submit</button>

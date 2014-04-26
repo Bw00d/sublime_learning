@@ -5,7 +5,6 @@ editor2.setTheme("ace/theme/idle_fingers");
 editor2.getSession().setMode("ace/mode/ruby");
 editor2.gotoLine(5);
 editor2.getSession().setTabSize(2);
-
 editor2.commands.addCommand({
 	name: 'swap_line_up',
 	bindKey: { mac: 'Ctrl-Command-Up'},

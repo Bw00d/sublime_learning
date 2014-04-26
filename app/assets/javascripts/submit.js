@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$('#editor-button2').hide();
 		$('#reset-button2').show();
 		input = editor2.getValue().trim();
-		answer = $('#answer-block').html().trim();
+		answer = $('#answer-block2').html().trim();
 		console.log(answer);
 		console.log(input);
 		result = answer.localeCompare(input);
