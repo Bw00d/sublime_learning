@@ -3,7 +3,7 @@
 <div class="large-9 large-centered columns lesson bottom-space">
 	<h2 class="center"><%= @lesson.name %></h2>
 	<div class="content bottom-space">
-		<%=  @lesson.content %>
+		<%= markdown @lesson.content %>
 	</div>
 	<p id="answer-block">
 		<%= @lesson.answer %>
@@ -28,7 +28,7 @@
 
 
 	<div class="content bottom-space">
-		<%=  @lesson.content2 %>
+		<%=  markdown @lesson.content2 %>
 	</div>
 	
 <!-- second editor =================== -->
