@@ -18,4 +18,13 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * I plan to use the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
 * Set up user authentication and validation.
 
+####Usage
+
+It is easy to get started building lessons. There is no new lesson link so navigate to the lessons/new to create a new lesson. At this time there is also no authentication to worry about. 
+
+Each lesson has two two editors which allows for two examples.  At the moment it is necessary to enter content into each editor or it will break the page.  I have tried to disable the second editor when @lesson.content2 is nil but it messes with the remaining editor's styling so until I fix that bug just make two examples.
+
+The content, editable_code, and answer <strong>must</strong> be entered as markdown. Make certain to use two space for newline.
+
+The edited code and the answer have to be exactly the same to past the test. 
 
