@@ -1,4 +1,5 @@
 ##Sublime Learning in Rails!
+![Code Climate](https://codeclimate.com/github/Bw00d/sublime_learning.png)](https://codeclimate.com/github/Bw00d/sublime_learning)
 
 ###Epicodus "Build anything you want" exercise.
 
