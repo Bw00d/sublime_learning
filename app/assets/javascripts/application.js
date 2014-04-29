@@ -16,7 +16,6 @@
 //= require mousetrap/global
 //= require mousetrap/dictionary
 //= require mousetrap/record
-//= require foundation
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

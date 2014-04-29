@@ -91,10 +91,12 @@ company {
 }
 .main-page {
 	/*width: 100%;*/
-  height: 410px;
+  min-height: 410px;
+  display: relative;
 	background-color: #2B2B2B;
 	color: #E8BF66;
 	padding-top: 8%;
+	padding-bottom: 2%;
 }
 .main-title {
 	background-color: #2B2B2B;
