@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426200201) do
+ActiveRecord::Schema.define(version: 20140429023801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 20140426200201) do
     t.text     "content2"
     t.text     "editable_code2"
     t.text     "answer2"
+    t.integer  "line_number"
+    t.integer  "editor_height"
+    t.integer  "line_number2"
+    t.integer  "editor_height2"
   end
 
 end

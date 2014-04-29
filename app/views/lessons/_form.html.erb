@@ -35,6 +35,18 @@
       <%= f.text_area :answer, class: "answer-field" %>
     </div>
   </div>
+  <div class="row">
+    <div class="form-group small-3 column">
+      <%= f.label :line_number %>
+      <%= f.text_field :line_number %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group small-3 column">
+      <%= f.label :editor_height %>
+      <%= f.text_field :editor_height %>
+    </div>
+  </div>
  <div class="row">
     <div class="form-group small-12 column">
       <%= f.label :content2 %>
@@ -53,7 +65,18 @@
       <%= f.text_area :answer2, class: "answer-field" %>
     </div>
   </div>
+  <div class="form-group small-3 column">
+      <%= f.label :line_number2 %>
+      <%= f.text_field :line_number2 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group small-3 column">
+      <%= f.label :editor_height2 %>
+      <%= f.text_field :editor_height2 %>
+    </div>
+  </div>
  
 
-  <%= f.submit "Save", class:  'button tiny'  %>
+  <div class="row"><%= f.submit "Save", class:  'button tiny'  %></div>
 <% end %>

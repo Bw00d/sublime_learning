@@ -60,6 +60,10 @@ private
                                  :answer,
                                  :content2,
                                  :editable_code2,
-                                 :answer2)
+                                 :answer2,
+                                 :editor_height,
+                                 :editor_height2,
+                                 :line_number,
+                                 :line_number2)
 	end
 end
