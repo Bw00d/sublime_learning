@@ -68,3 +68,11 @@ editor2.commands.addCommand({
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
+editor2.commands.addCommand({
+	name: 'toggle_block_comment',
+	bindKey: { mac: 'Command-Option-/'},
+	exec: function(editor2) {
+	      editor2.toggleBlockComment()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
