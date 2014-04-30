@@ -11,6 +11,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * The <a heref="">ace editor</a> is embedded and will allow the user to practice editing the editable code block.
 * I am able to add a Sublime Text keyboard binding and use it in the editor.
 * I am able to test edited code against answer code and return an alert or notice to the user depend on whether or not their input is correct.
+* I can assign the cursor to a specific line for each lesson
 
 
 ####Todo
@@ -18,6 +19,17 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * Make a consolidated js file of all the relevant key bindings.
 * I plan to use the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
 * Set up user authentication and validation.
+* Research whether or not I can just edit the vim keybindings instead of chaining methods to make Sublime keybindings.
+* Get Foundation offcanvas to work
+* Set editor height for each lesson
+
+####Issues
+
+* The ace editor has many default keybindgs and some of them produce conflicting or unexpected behavior. 
+* I am finding it difficult to get mouse trap to record keystrokes.
+* So far attempts to change the height of the editor for each lesson have caused the syntax highlighting to disappear and have had no effect on the editor height.
+* I am unable to get the offcanvas menu to work. It way the asset pipeline requires files may be causing a conflict. 
+
 
 ####Usage
 
