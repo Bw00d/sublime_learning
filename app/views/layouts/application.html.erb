@@ -9,18 +9,20 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-    <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+   
 
   </head>
 
   <body>
 
-    <%= render 'layouts/header' %> 
+    <%#= render 'layouts/header' %> 
 
     <%= yield %>
 
     <%#= render 'layouts/footer' %>
     
+    <script src="jquery.js"></script>
+    <script src="foundation.min.js"></script>
     <%= javascript_include_tag "http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js", "application" %>
   </body>
 </html>

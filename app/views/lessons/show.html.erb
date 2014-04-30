@@ -1,53 +1,114 @@
 
 <%= provide :title, @lesson.name %>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap" data-no-turbolink>
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
 
-<div class="large-9 large-centered columns lesson bottom-space">
-	<h2 class="center"><%= @lesson.name %></h2>
-	<div class="content bottom-space">
-		<%= markdown @lesson.content %>
-	</div>
-	<p id="answer-block">
-		<%= @lesson.answer %>
-	</p>
-<p id="answer-block2">
-		<%= @lesson.answer2 %>
-	</p>
+      <section class="middle tab-bar-section">
+        <h1 class="title"><%= link_to "Learn Sublime", root_path %></h1>
+      </section>
 
-<!-- first editor =========================================================== -->
-	<div class="ace-bock">
-		<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
-	</div>
-  <button id="editor-button" type="submit" class="">submit</button>
-  <button id="reset-button" type="reset" class="">reset</button>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
 
-  <button id="notice-correct" type="reset" class="">
-  	Good job! Wasn't that easy?
-  </button>
-  <button id="alert-wrong" type="reset" class="">
-  	Oops, not quite. Try using the short cut to fix the code.
-  </button>
+    <aside class="left-off-canvas-menu" data-no-turbolink>
+      <ul class="off-canvas-list">
+        <li><label>Lessons</label></li>
+        <li><a href="#">Lesson one</a></li>
+        <li><a href="#">Lesson two</a></li>
+        <li><a href="#">Lesson three</a></li>
+      </ul>
+    </aside>
+
+     <aside class="right-off-canvas-menu" data-no-turbolink>
+      <ul class="off-canvas-list">
+        <li><label>shortcuts</label></li>
+        <li>move line up</li>
+        <li>move line down</li>
+        <li>add line up</li>
+        <li>add line down</li>
+        <li>indent</li>
+        <li>unindent</li>
+      </ul>
+    </aside>
 
 
-	<div class="content bottom-space">
-		<%=  markdown @lesson.content2 %>
-	</div>
-	
-<!-- second editor =================== -->
-	<div class="ace-bock">
-		<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
-	</div>
+    <section class="main-section">
 
-  <button id="editor-button2" type="submit" class="">submit</button>
-  <button id="reset-button2" type="submit" class="">reset</button>
-	<%= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
-  <button id="notice-correct2" type="reset" class="">
-  	Good job! Wasn't that easy?
-  </button>
-  <button id="alert-wrong2" type="reset" class="">
-  	Oops, not quite. Try using the short cut to fix the code.
-  </button>
-	<div class="small-1 small-centered columns">
-		<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png" %></a></p>
-	</div>
- </div>
-</div>	
+
+			<div class="large-9 large-centered columns lesson bottom-space">
+				<h2 class="center"><%= @lesson.name %></h2>
+				<div class="content bottom-space">
+					<%= markdown @lesson.content %>
+				</div>
+
+				<p id="answer-block">
+					<%= @lesson.answer %>
+				</p>
+				<p id="line-number">
+					<%= @lesson.line_number %>
+				</p>
+				<p id="editor-height">
+					<%= @lesson.editor_height %>
+				</p>
+				
+				<p id="answer-block2">
+					<%= @lesson.answer2 %>
+				</p>
+				<p id="line-number2">
+					<%= @lesson.line_number2 %>
+				</p>
+				<p id="editor-height2">
+					<%= @lesson.editor_height2 %>
+				</p>
+
+			<!-- first editor =========================================================== -->
+				<div class="ace-bock">
+					<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
+				</div>
+			  <button id="editor-button" type="submit" class="">submit</button>
+			  <button id="reset-button" type="reset" class="">reset</button>
+
+			  <button id="notice-correct" type="reset" class="">
+			  	Good job! Wasn't that easy?
+			  </button>
+			  <button id="alert-wrong" type="reset" class="">
+			  	Oops, not quite. Try using the short cut to fix the code.
+			  </button>
+
+
+				<div class="content bottom-space">
+					<%=  markdown @lesson.content2 %>
+				</div>
+				
+			<!-- second editor =================== -->
+				<div class="ace-bock">
+					<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
+				</div>
+
+			  <button id="editor-button2" type="submit" class="">submit</button>
+			  <button id="reset-button2" type="submit" class="">reset</button>
+				<%= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
+			  <button id="notice-correct2" type="reset" class="">
+			  	Good job! Wasn't that easy?
+			  </button>
+			  <button id="alert-wrong2" type="reset" class="">
+			  	Oops, not quite. Try using the short cut to fix the code.
+			  </button>
+				<div class="small-1 small-centered columns">
+					<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png" %></a></p>
+				</div>
+			 </div>
+			</div>	
+
+		</section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
