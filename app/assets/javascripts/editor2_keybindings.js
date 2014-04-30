@@ -36,3 +36,27 @@ editor2.commands.addCommand({
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
+editor2.commands.addCommand({
+	name: 'indent',
+	bindKey: { mac: 'Command-]'},
+	exec: function(editor2) {
+	      editor2.indent()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
+editor2.commands.addCommand({
+	name: 'unindent',
+	bindKey: { mac: 'Command-['},
+	exec: function(editor2) {
+	      editor2.blockOutdent()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
+editor2.commands.addCommand({
+	name: 'delete_line',
+	bindKey: { mac: 'Shift-Ctrl-k'},
+	exec: function(editor2) {
+	      editor2.removeLines()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
