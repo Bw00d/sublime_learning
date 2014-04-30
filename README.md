@@ -28,7 +28,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * The ace editor has many default keybindigs and some of them produce conflicting or unexpected behavior. 
 * I am finding it difficult to get mousetrap to record keystrokes.
 * So far attempts to change the height of the editor for each lesson have caused the syntax highlighting to disappear and have had no effect on the editor height.
-* I am unable to get the offcanvas menu to work. It way the asset pipeline requires files may be causing a conflict. 
+* I am unable to get the offcanvas menu to work. The way the asset pipeline requires files may be causing a conflict. 
 
 
 ####Usage
