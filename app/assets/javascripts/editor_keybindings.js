@@ -39,7 +39,7 @@ editor.commands.addCommand({
 	name: 'indent',
 	bindKey: { mac: 'Command-]'},
 	exec: function(editor) {
-	      editor.blockIndent()
+	      editor.indent()
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
@@ -56,6 +56,22 @@ editor.commands.addCommand({
 	bindKey: { mac: 'Shift-Ctrl-k'},
 	exec: function(editor) {
 	      editor.removeLines()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
+editor.commands.addCommand({
+	name: 'delete_to_end_of_line',
+	bindKey: { mac: 'Ctrl-k'},
+	exec: function(editor) {
+	      editor.removeToLineEnd()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});
+editor.commands.addCommand({
+	name: 'toggle_block_comment',
+	bindKey: { mac: 'Command-Option-/'},
+	exec: function(editor) {
+	      editor.toggleBlockComment()
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });

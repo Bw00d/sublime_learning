@@ -60,3 +60,11 @@ editor2.commands.addCommand({
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
+editor2.commands.addCommand({
+	name: 'delete_to_end_of_line',
+	bindKey: { mac: 'Ctrl-k'},
+	exec: function(editor2) {
+	      editor2.removeToLineEnd()
+	},
+	readOnly: false // false if this command should not apply in readOnly mode
+});

@@ -31,7 +31,11 @@ The edited code and the answer have to be exactly the same to past the test.
 
 ####Keybindings
 * delete line :  shft+ctrl+k
+* delete to end of line : ctrl+k
 * indent :  dmc+] !note: the indent() only indent from cursor. blockIndent() is the method that should move the entire line, however, it does not work.
 * unindent :  cmd+[
 * swap line up : ctrl+cmd+up
 * swap line down : ctrl+cmd+down
+* duplicate line down : shift+cmd+d
+* toggle comment: cmd+/
+* toggle block comment : cmd+opt+/ !NOT WORKING!
