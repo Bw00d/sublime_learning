@@ -29,6 +29,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * I am finding it difficult to get mousetrap to record keystrokes.
 * So far attempts to change the height of the editor for each lesson have caused the syntax highlighting to disappear and have had no effect on the editor height.
 * I am unable to get the offcanvas menu to work. The way the asset pipeline requires files may be causing a conflict. 
+* Trying to compare angle brackets between the editor and the answer always returns unequal. This may be an effect of using markdown.
 
 
 ####Usage
