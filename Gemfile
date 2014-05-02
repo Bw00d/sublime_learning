@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'rake', '~> 10.2.2'
-
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'
@@ -25,14 +23,9 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'guard-rspec'
-  gem 'spork-rails'
-  gem 'guard-spork'
-  gem 'childprocess'
 end
 
 group :test do
-  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
 end
 
