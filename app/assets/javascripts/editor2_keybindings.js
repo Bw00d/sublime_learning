@@ -2,7 +2,7 @@ var editor2 = ace.edit("editor2");
 
 editor2.commands.addCommand({
 	name: 'swap_line_up',
-	bindKey: { mac: 'Ctrl-Command-Up'},
+	bindKey: { win: 'Ctrl-Shift-Up', mac: 'Ctrl-Command-Up'},
 	exec: function(editor2) {
 	     editor2.moveLinesUp();
 	},
@@ -11,7 +11,7 @@ editor2.commands.addCommand({
 
 editor2.commands.addCommand({
 	name: 'swap_line_down',
-	bindKey: { mac: 'Ctrl-Command-Down'},
+	bindKey: { win: 'Ctrl-Shift-Down', mac: 'Ctrl-Command-Down'},
 	exec: function(editor2) {
 	     editor2.moveLinesDown();
 	},
@@ -38,7 +38,7 @@ editor2.commands.addCommand({
 });
 editor2.commands.addCommand({
 	name: 'indent',
-	bindKey: { mac: 'Command-]'},
+	bindKey: { win: 'Ctrl-]', mac: 'Command-]'},
 	exec: function(editor2) {
 	      editor2.indent()
 	},
@@ -46,7 +46,7 @@ editor2.commands.addCommand({
 });
 editor2.commands.addCommand({
 	name: 'unindent',
-	bindKey: { mac: 'Command-['},
+	bindKey: { win: 'Ctrl-[', mac: 'Command-['},
 	exec: function(editor2) {
 	      editor2.blockOutdent()
 	},
@@ -54,7 +54,7 @@ editor2.commands.addCommand({
 });
 editor2.commands.addCommand({
 	name: 'delete_line',
-	bindKey: { mac: 'Shift-Ctrl-k'},
+	bindKey: { win: 'Ctrl-Shift-k', mac: 'Shift-Ctrl-k'},
 	exec: function(editor2) {
 	      editor2.removeLines()
 	},
@@ -62,7 +62,7 @@ editor2.commands.addCommand({
 });
 editor2.commands.addCommand({
 	name: 'delete_to_end_of_line',
-	bindKey: { mac: 'Ctrl-k'},
+	bindKey: { win: 'Ctrl-k', mac: 'Ctrl-k'},
 	exec: function(editor2) {
 	      editor2.removeToLineEnd()
 	},
@@ -70,7 +70,7 @@ editor2.commands.addCommand({
 });
 editor2.commands.addCommand({
 	name: 'toggle_block_comment',
-	bindKey: { mac: 'Command-Option-/'},
+	bindKey: { win: 'Ctrl-Shift-/', mac: 'Command-Option-/'},
 	exec: function(editor2) {
 	      editor2.toggleBlockComment()
 	},
