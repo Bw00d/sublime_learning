@@ -22,8 +22,31 @@ end
 
 feature "lesson pages" do
 	before { @lesson = FactoryGirl.create(:lesson)}
+	before { @lesson2 = FactoryGirl.create(:lesson)}
 	before { visit lesson_path(@lesson) }
 	subject { page }
 
 	it { should have_title "Sublime Learning | #{@lesson.name}"}
+	it { should have_link "Learn Sublime", href: root_path }
+	it { should have_selector 'h2', text: @lesson.name }
+
+  it 'should have a link to the next lesson' do
+  	click_link "next lesson"
+  	expect(page).to have_title "Sublime Learning | #{@lesson2.name}"
+  end
+
+  it 'should have an editor with lesson content from first lesson' do
+  	expect(page).to have_content @lesson.content
+  end
+
+  it 'if edited text is equal to the answer user should get a success notice' do
+  	click_button('editor-button')
+  	expect(page).to have_content "Good job! Wasn't that easy?"
+  end
+
+  it 'if edited text is not equal to answer it should get a failure notice' do
+  	click_button('editor-button2')
+  	expect(page).to have_content "Oops, not quite."
+  end
+
 end

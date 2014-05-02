@@ -1,4 +1,3 @@
-
 <%= provide :title, @lesson.name %>
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap" data-no-turbolink>
@@ -56,7 +55,7 @@
 				<p id="editor-height">
 					<%= @lesson.editor_height %>
 				</p>
-				
+
 				<p id="answer-block2">
 					<%= @lesson.answer2 %>
 				</p>
@@ -85,7 +84,7 @@
 				<div class="content bottom-space">
 					<%=  markdown @lesson.content2 %>
 				</div>
-				
+
 			<!-- second editor =================== -->
 				<div class="ace-bock">
 					<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
@@ -101,10 +100,10 @@
 			  	Oops, not quite. Try using the short cut to fix the code.
 			  </button>
 				<div class="small-1 small-centered columns">
-					<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png" %></a></p>
+					<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png", id: "octocat-link", alt: "octocat-logo" %></a></p>
 				</div>
 			 </div>
-			</div>	
+			</div>
 
 		</section>
 
@@ -112,3 +111,4 @@
 
   </div>
 </div>
+
