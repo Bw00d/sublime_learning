@@ -1,5 +1,5 @@
 
-<%= provide :title, @lesson.name %>
+<%= content_for(:title, @lesson.name) %>
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap" data-no-turbolink>
     <nav class="tab-bar">
