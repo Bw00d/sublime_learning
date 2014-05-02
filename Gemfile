@@ -25,6 +25,9 @@ group :test, :development do
   gem 'capybara'
   gem 'launchy'
   gem 'guard-rspec'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 group :test do
