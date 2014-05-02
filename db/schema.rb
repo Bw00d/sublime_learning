@@ -40,4 +40,13 @@ ActiveRecord::Schema.define(version: 20140429023801) do
     t.integer  "editor_height2"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "author",          default: false
+  end
+
 end
