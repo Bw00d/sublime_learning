@@ -24,9 +24,11 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'guard-rspec'
 end
 
 group :test do
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
 end
 
