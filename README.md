@@ -43,6 +43,7 @@ The content, editable_code, and answer <strong>must</strong> be entered as markd
 The edited code and the answer have to be exactly the same to past the test. 
 
 ####Keybindings
+**Note** Currently keybindings only work on Mac. I will update with Windows keybings soon.
 * delete line :  shft+ctrl+k
 * delete to end of line : ctrl+k
 * indent :  dmc+] !note: the indent() only indent from cursor. blockIndent() is the method that should move the entire line, however, it does not work.
