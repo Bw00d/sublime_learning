@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-
+gem 'rake', '~> 10.2.2'
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'
@@ -29,7 +28,6 @@ end
 
 group :test do
   gem 'shoulda-matchers'
- 
 end
 
 group :production do
