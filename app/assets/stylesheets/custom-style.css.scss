@@ -31,30 +31,7 @@ h1 {
 .right-links {
 	margin: 15px 13% 0 0;
 }
-// .navbar .nav>li>a {
-// 	padding: 13px 15px 6px 15px;
-// 	font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-// 	color: #555555;
-// 	text-decoration: none;
-// 	font-size: 1em;
-// }
-// .nav>li>a {
-// 	display:inline;
-// }
-// .nav>li>a:hover {
-// 	background-color: white;
-// 	color: red;
-// }
-// li {
-// 	line-height: 20px;
-// }
 
-// .nav {
-// 	list-style: none;
-//   ul {
-// 	display: inline;
-// 	}
-// }
 #right-links {
 	li {
 	float: right;
@@ -73,6 +50,11 @@ h1 {
 	h1 {
 		text-align: center;
 		color: black;
+	}
+	h3 {
+		text-align: center;
+		color: #C3C3C3;
+		margin-top: -40px;
 	}
 }
 
