@@ -4,17 +4,23 @@
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
-  </div>
-  <div class="row">
     <div class="form-group small-3 column">
       <%= f.label :number %>
       <%= f.text_field :number %>
     </div>
+    <div class="form-group small-3 column end">
+      <%= f.label :chapter_id %>
+      <%= f.text_field :chapter_id %>
+    </div>
   </div>
   <div class="row">
     <div class="form-group small-3 column">
-      <%= f.label :chapter_id %>
-      <%= f.text_field :chapter_id %>
+      <%= f.label :line_number %>
+      <%= f.text_field :line_number %>
+    </div>
+    <div class="form-group small-3 column end">
+      <%= f.label :editor_height %>
+      <%= f.text_field :editor_height %>
     </div>
   </div>
   <div class="row">
@@ -29,7 +35,7 @@
       <%= f.text_area :editable_code, class: "editable-code-field" %>
     </div>
   </div>
- <div class="row">
+  <div class="row">
     <div class="form-group small-12 column">
       <%= f.label :answer %>
       <%= f.text_area :answer, class: "answer-field" %>
@@ -37,17 +43,15 @@
   </div>
   <div class="row">
     <div class="form-group small-3 column">
-      <%= f.label :line_number %>
-      <%= f.text_field :line_number %>
+      <%= f.label :line_number2 %>
+      <%= f.text_field :line_number2 %>
+    </div>
+    <div class="form-group small-3 column end">
+      <%= f.label :editor_height2 %>
+      <%= f.text_field :editor_height2 %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group small-3 column">
-      <%= f.label :editor_height %>
-      <%= f.text_field :editor_height %>
-    </div>
-  </div>
- <div class="row">
     <div class="form-group small-12 column">
       <%= f.label :content2 %>
       <%= f.text_area :content2, class: "content-field" %>
@@ -59,24 +63,15 @@
       <%= f.text_area :editable_code2, class: "editable-code-field" %>
     </div>
   </div>
- <div class="row">
+  <div class="row">
     <div class="form-group small-12 column">
       <%= f.label :answer2 %>
       <%= f.text_area :answer2, class: "answer-field" %>
     </div>
   </div>
-  <div class="form-group small-3 column">
-      <%= f.label :line_number2 %>
-      <%= f.text_field :line_number2 %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group small-3 column">
-      <%= f.label :editor_height2 %>
-      <%= f.text_field :editor_height2 %>
-    </div>
+  <div class="row center">
+    <%= f.submit "Save", class:  'button tiny'  %>
   </div>
  
 
-  <div class="row"><%= f.submit "Save", class:  'button tiny'  %></div>
 <% end %>

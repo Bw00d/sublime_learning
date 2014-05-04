@@ -1,13 +1,14 @@
-
 <%= content_for(:title, 'New lesson') %>
-<div class="row top-div">
+
+<%= render 'navbar' %>
+<div class="drk-bckgrnd">
+	<div class="row top-div">
   <h3>Create a lesson</h3>
-</div>
+	</div>
 
-<div class='row bottom-space'>
-  <%= render 'layouts/errors', { object: @lesson } %>
+	<div class='row bottom-space'>
+	  <%= render 'layouts/errors', { object: @lesson } %>
 
-  <h4>Edit Lesson:</h4>
-
-  <%= render 'form' %>
+	  <%= render 'form' %>
+	</div>
 </div>

@@ -1,0 +1,36 @@
+$blue: #6B97B2;
+$green: #A5C259;
+$orange: #C66427;
+.drk-bckgrnd {
+	margin-top: -50px;
+	width: 100%;
+	height: 100%;
+	background-color: #2B2B2B !important;
+	color: #C66427 !important;
+	h3 {
+		color: $blue;
+	}
+	h4 {
+		color: $blue;
+	}
+	label {
+		color: $blue;
+	}
+	input {
+		color: $orange;
+		border: 1px solid $blue;
+		background-color: transparent;
+	}
+	textarea {
+		border: 1px solid $blue;
+		background-color: #2B2B2B;
+		color: $orange;
+		:focus {
+			background-color: transparent;
+		}
+	}
+	input:focus {
+		background-color: transparent !important;
+	}
+}
+
