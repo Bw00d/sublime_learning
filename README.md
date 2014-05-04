@@ -22,6 +22,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * Research whether or not I can just edit the vim keybindings instead of chaining methods to make Sublime keybindings.
 * Get Foundation offcanvas to work
 * Set editor height for each lesson
+* DRY up code so admin can add editors to code as necessary instead of having two editors per lesson.  
 
 ####Issues
 
