@@ -14,7 +14,7 @@ describe "Pages" do
   describe "lesson pages" do
     it "should have the title with the lesson name" do
       visit "lessons/#{@lesson.id}"
-      expect(page).to have_title("Sublime Learning | #{@lesson.name}")
+      expect(page).to have_title("#{@lesson.name} | Sublime Learning")
     end
   end
 end
