@@ -7,7 +7,6 @@ editor.commands.addCommand({
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
-
 editor.commands.addCommand({
 	name: 'swap_line_down',
 	bindKey: { win: 'Ctrl-Shift-Down', mac: 'Ctrl-Command-Down'},
