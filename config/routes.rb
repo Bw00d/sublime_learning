@@ -4,5 +4,6 @@ SublimeLearning::Application.routes.draw do
 	get "lessons/thats_all"
 
   resources :lessons, except: [:new]
+  resources :users
 
 end

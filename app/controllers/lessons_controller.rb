@@ -6,6 +6,7 @@ class LessonsController < ApplicationController
 	end
 
 	def no_lesson
+		@lessons = Lesson.all
 		render('lessons/no_lesson.html.erb')
 	end
 
@@ -15,6 +16,7 @@ class LessonsController < ApplicationController
 	end
 
 	def show
+		@lessons = Lesson.all
 		@lesson = Lesson.find(params[:id])
 		if @lesson.next == nil
 			# render('lessons/no_lesson.html.erb')
@@ -35,6 +37,7 @@ class LessonsController < ApplicationController
 	end
 
 	def edit
+		@lessons = Lesson.all
 		@lesson = Lesson.find(params[:id])
 		render('lessons/edit.html.erb')
 	end

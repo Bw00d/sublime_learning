@@ -14,26 +14,23 @@
       </section>
     </nav>
 
-    <aside class="left-off-canvas-menu" data-no-turbolink>
+    <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label>Lessons</label></li>
-        <li><a href="#">Lesson one</a></li>
-        <li><a href="#">Lesson two</a></li>
-        <li><a href="#">Lesson three</a></li>
+        <% if @lessons %>
+          <% @lessons.each do |lesson| %>
+            <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
+          <% end %>
+        <% end %>
       </ul>
     </aside>
 
-     <aside class="right-off-canvas-menu" data-no-turbolink>
+     <aside class="right-off-canvas-menu">
       <ul class="off-canvas-list">
-        <li><label>shortcuts</label></li>
-        <li>move line up</li>
-        <li>move line down</li>
-        <li>add line up</li>
-        <li>add line down</li>
-        <li>indent</li>
-        <li>unindent</li>
+        <li><label>User</label></li>
+        <li><%= link_to "Login", '#' %></li>
+        <li><%= link_to "Signup", new_user_path %></li>
       </ul>
     </aside>
-  </div>
-</div>
+
 
