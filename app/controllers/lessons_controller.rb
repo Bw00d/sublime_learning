@@ -5,6 +5,10 @@ class LessonsController < ApplicationController
 		@lesson = @lessons.first
 	end
 
+	def no_lesson
+		render('lessons/no_lesson.html.erb')
+	end
+
 	def index
 		@lessons = Lesson.all
 		@lesson = Lesson.new
@@ -12,6 +16,12 @@ class LessonsController < ApplicationController
 
 	def show
 		@lesson = Lesson.find(params[:id])
+		if @lesson.next == nil
+			# render('lessons/no_lesson.html.erb')
+			redirect_to lessons_thats_all_path
+		else
+			@lesson
+		end
 	end
 
 	def new
