@@ -29,8 +29,30 @@ $orange: #C66427;
 			background-color: transparent;
 		}
 	}
+
 	input:focus {
 		background-color: transparent !important;
+	}
+  textarea::-webkit-scrollbar {
+    width: 15px;
+	}
+	 
+	textarea::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+	}
+	 
+	textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    border: 1px solid $blue; 
+	}
+	textarea::-webkit-resizer {
+		background-color: transparent;
+		color: $blue; 
+	}
+	textarea::-webkit-scrollbar-corner {
+		background-color: transparent;
 	}
 }
 
