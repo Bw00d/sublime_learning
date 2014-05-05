@@ -24,10 +24,6 @@ class LessonsController < ApplicationController
 		end
 	end
 
-	def new
-		@lesson = Lesson.new
-	end
-
 	def create
 		@lessons = Lesson.all
 		@lesson = Lesson.new(lessons_params)
