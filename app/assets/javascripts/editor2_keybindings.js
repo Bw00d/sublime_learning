@@ -75,5 +75,13 @@ editor2.commands.addCommand({
 	},
 	readOnly: false // false if this command should not apply in readOnly mode
 });
+// editor2.commands.addCommand({
+// 	name: 'duplicate_lines',
+// 	bindKey: { win: 'Ctrl+Shift+d', mac: 'Command+Shift+d'},
+// 	exec: function(editor2) {
+	      
+// 	},
+// 	readOnly: false // false if this command should not apply in readOnly mode
+// });
 
 
