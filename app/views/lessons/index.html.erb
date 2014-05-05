@@ -5,8 +5,9 @@
 	<div class="row top-div">
 	  <h3>Lessons:</h3>
 	  <ul>
+	  	<% @lessons.sort_by! { |lesson| lesson.number } %>
 	    <% @lessons.each do |lesson| %>
-	    <li><%= lesson.name %> <%= lesson.number %><br><span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), { method: 'get' } %> | <%= link_to "delete", lesson_path(lesson), { confirm: 'You sure?', method: 'delete' } %></li></span>
+	    <li>Lesson <%= lesson.number %>: <%= lesson.name %> <br><span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), { method: 'get' } %> | <%= link_to "delete", lesson_path(lesson), { confirm: 'You sure?', method: 'delete' } %></li></span>
 	    <% end %>
 	    </ul>
 	    <hr>
