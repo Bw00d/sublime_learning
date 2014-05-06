@@ -165,10 +165,10 @@ DEPENDENCIES
   mousetrap-rails
   pg
   quiet_assets
-  rails (= 4.0.4)
+  rails
   rails_12factor
   redcarpet
   rspec-rails
-  sass-rails (= 4.0.2)
+  sass-rails
   shoulda-matchers
   uglifier
