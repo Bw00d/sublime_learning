@@ -1,0 +1,24 @@
+<% provide(:title, "Login") %>
+<%= render 'lessons/navbar' %>
+<div class="row">
+	<h1>Login</h1>
+</div>
+	<div class="row">
+	  <div class="small-6 columns">
+	    <%= form_for(:session, url: sessions_path) do |f| %>
+
+	      <%= f.label :email %>
+	      <%= f.text_field :email %>
+
+	      <%= f.label :password %>
+	      <%= f.password_field :password %>
+
+	      <%= f.submit "Login", class: "button" %>
+	    <% end %>
+
+	    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+	  </div>
+	</div>
+	
+</div>
+</div>

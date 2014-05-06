@@ -5,5 +5,9 @@ SublimeLearning::Application.routes.draw do
 
   resources :lessons, except: [:new]
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/login',   to: 'sessions#new',         via: 'get'
+  match '/logout', to: 'sessions#destroy',     via: 'delete'
 
 end
