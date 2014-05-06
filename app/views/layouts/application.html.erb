@@ -14,12 +14,6 @@
 
   <body id="<%= controller.controller_name %>">
 
-    <div class="row"> 
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-    </div>
-
     <%= yield %>
     
     <script src="foundation.min.js"></script>

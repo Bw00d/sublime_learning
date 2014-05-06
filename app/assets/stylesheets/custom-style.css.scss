@@ -282,3 +282,6 @@ body#users {
   @extend .control-group;
   @extend .error;
 }
+.alert {
+	color: red;
+}

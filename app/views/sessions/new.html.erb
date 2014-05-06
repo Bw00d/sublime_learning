@@ -13,6 +13,11 @@
 	      <%= f.label :password %>
 	      <%= f.password_field :password %>
 
+			<div class="row"> 
+	      <% flash.each do |key, value| %>
+	        <div class="alert alert-<%= key %>"><%= value %></div>
+	      <% end %>
+	    </div>
 	      <%= f.submit "Login", class: "button" %>
 	    <% end %>
 
