@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 		@lessons = Lesson.all
 		@user = User.new(user_params)
 		if @user.save
+			sign_in @user
 			redirect_to lesson_path(@lessons.first)
 		else
 			redirect_to :back
