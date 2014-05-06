@@ -13,4 +13,11 @@ FactoryGirl.define do
     answer2 "hi"
     line_number2 "1"
   end
+
+  factory :user do
+    name     "Chuck Norris"
+    email    "cnorris@example.com"
+    password "foobar"
+    password_confirmation "foobar"
+  end
 end
