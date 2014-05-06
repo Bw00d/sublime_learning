@@ -1,9 +1,9 @@
 $blue: #6B97B2;
 $green: #A5C259;
 $orange: #C66427;
-body, html {
-	height: 100%;
-}
+// body, html {
+// 	height: 100%;
+// }
 body#lessons {
 	background-color: #EDECE4 !important;
 }
@@ -271,10 +271,15 @@ code {
 box-shadow: none;
 }
 .bottom-div {
+	height: 200px;
 
 	width: 75%;
 	margin: 0 auto;
 }
 body#users {
 	background-color: $blue;
+}
+.icon-container {
+	width: 75%;
+	margin: 65px auto 50px auto;
 }
