@@ -1,5 +1,7 @@
 class LessonsController < ApplicationController
 
+  before_filter :author_user,  only: [:create, :edit, :destroy]
+
 	def landing
 		@lessons = Lesson.all
 		@lesson = @lessons.first
@@ -75,4 +77,13 @@ private
                                  :line_number,
                                  :line_number2)
 	end
+	def correct_user
+        @user = User.find(params[:id])
+        redirect_to(root_path) unless current_user?(@user)
+    end
+
+    def author_user
+      redirect_to root_path unless current_user.author?
+    
+    end
 end

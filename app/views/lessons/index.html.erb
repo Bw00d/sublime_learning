@@ -7,18 +7,23 @@
 			  <ul>
 			  	<% @lessons.sort_by! { |lesson| lesson.number } %>
 			    <% @lessons.each do |lesson| %>
-			    <li>Lesson <%= lesson.number %>: <%= lesson.name %> <br><span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), { method: 'get' } %> | <%= link_to "delete", lesson_path(lesson), { confirm: 'You sure?', method: 'delete' } %></li></span>
+			    <li>Lesson <%= lesson.number %>: <%= lesson.name %> <br>
+			    	 <% if !current_user.nil? && current_user.author == true %>
+			    	<span class="small-links"><%= link_to "edit", edit_lesson_path(lesson), { method: 'get' } %> | <%= link_to "delete", lesson_path(lesson), { confirm: 'You sure?', method: 'delete' } %></li></span>
+			    	<% end %>
 			    <% end %>
 			    </ul>
 			    <hr>
 			</div>
 
 			<div class="row">
+			  <% if !current_user.nil? && current_user.author == true %>
 			  <h3>Create a new lesson</h3>
 			</div>
 			<div class="row bottom-space">
 			  <%= render 'form' %>
 			</div>
+				<% end %>
 		</div>
 		<!-- closing divs for offcanvas -->
 	 </div>

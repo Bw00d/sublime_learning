@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+	before_filter :signed_in_user, 
+                only: [:index, :edit, :update, :destroy]
+  before_filter :correct_user,   only: [:edit, :update]
+  before_filter :author_user,      only: :destroy
  
 	def new
 		@lessons = Lesson.all
@@ -22,4 +26,14 @@ class UsersController < ApplicationController
 		def user_params
 			params.require(:user).permit(:name, :email, :password, :password_confirmation, :author)
 		end
+
+		def correct_user
+        @user = User.find(params[:id])
+        redirect_to(root_path) unless current_user?(@user)
+    end
+
+    def author_user
+      redirect_to root_path unless current_user.author?
+    
+    end
 end
