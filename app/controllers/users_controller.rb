@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
-
+ 
 	def new
-		# @user = User.new
+		@lessons = Lesson.all
+		@users = User.all
+		@user = User.new
 	end
 
 	def create

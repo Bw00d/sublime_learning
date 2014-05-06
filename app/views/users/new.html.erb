@@ -1,1 +1,24 @@
-<%= content_for(:title, "New user") %>
+<% content_for(:title, "New user") %>
+
+<%= render 'lessons/navbar' %>
+		<div class="drk-bckgrnd">
+			<div class="row top-div half-page">
+				<h3>Make an account</h3>
+				<%= render 'users/form' %>
+			</div>
+		</div>
+		<div class="bottom-div">
+			<h3>All Users</h3>
+				<ul>
+					<% @users.each do |user|  %>
+					<li><strong><%= user.name %></strong><br>
+						<% if user.author %>
+						<span class="orange">author</span>
+						<% end %>
+					</li>
+					<% end %>
+				</ul>
+		</div>
+		<!-- closing divs for offcanvas -->
+	 </div>
+</div>

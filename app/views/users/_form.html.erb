@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+  <div class="row">
+		<div class="form-group small-6 column">
+	    <%= f.label :name %>
+	    <%= f.text_field :name %>
+	  </div>
+		<div class="form-group small-6 column">
+		  <%= f.label :email %>
+		  <%= f.text_field :email %>
+	  </div>
+  </div>
+  <div class="row">
+	  <div class="form-group small-6 column">
+		  <%= f.label :password %>
+		  <%= f.text_field :password %>
+	  </div>
+	  <div class="form-group small-6 column">
+		  <%= f.label "Confirm password" %>
+		  <%= f.text_field :password_confirmation %>
+	  </div>
+	</div>
+  <div class="row center">
+    <%= f.submit "Submit", class: 'button tiny'  %>
+  </div>
+<% end %>
