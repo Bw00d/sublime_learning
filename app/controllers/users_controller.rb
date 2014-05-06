@@ -7,9 +7,10 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		@lessons = Lesson.all
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to lessons_path
+			redirect_to lesson_path(@lessons.first)
 		else
 			redirect_to :back
 		end

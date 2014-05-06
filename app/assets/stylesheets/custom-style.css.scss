@@ -17,30 +17,12 @@ h1 {
 
 /* header */
 
-#header { 
-	height: 40px;
-	background-color: #232323;
-	padding-top: 15px;
-	color: #79878A;
-	}
-.heading {
-	color: white;
-	font-size: 1.3em;
-	margin: 10px 0 0 43% !important;
-	a {
-		color: white;
-	}
-	a:hover {
-		color: #008cba;
-	}
-}
-.right-links {
-	margin: 15px 13% 0 0;
-}
-
-#right-links {
+/* off-canvas */
+#user-info {
 	li {
-	float: right;
+		color: $blue;
+		list-style: none;
+		padding-top: 15px;
 	}
 }
 
