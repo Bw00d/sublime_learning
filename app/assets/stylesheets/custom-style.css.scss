@@ -1,4 +1,10 @@
-body {
+$blue: #6B97B2;
+$green: #A5C259;
+$orange: #C66427;
+body, html {
+	height: 100%;
+}
+body#lessons {
 	background-color: #EDECE4 !important;
 }
 div.main {
@@ -265,7 +271,10 @@ code {
 box-shadow: none;
 }
 .bottom-div {
-	
+
 	width: 75%;
 	margin: 0 auto;
+}
+body#users {
+	background-color: $blue;
 }
