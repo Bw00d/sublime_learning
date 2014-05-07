@@ -17382,6 +17382,13 @@ Mousetrap = (function(Mousetrap) {
 
 
 
+$(document).ready( function() {
+	if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+	  $("body").addClass("mac");
+	} else {
+	  $("body").addClass("pc");
+	}
+});
 var line2 = $('#line-number2').text();
 var editor2 = ace.edit("editor2");
 
@@ -17411,10 +17418,6 @@ editor.getSession().setTabSize(2);
 editor.getSession().on('change', function(e) {
 
 });
-
- 
-
-
 var editor2 = ace.edit("editor2");
 
 editor2.commands.addCommand({
