@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
 
-  before_filter :author_user,  only: [:create, :edit, :destroy]
+  # before_filter :author_user,  only: [:create, :edit, :destroy]
 
 	def landing
 		@lessons = Lesson.all
