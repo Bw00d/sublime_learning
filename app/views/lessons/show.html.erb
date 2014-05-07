@@ -51,24 +51,24 @@
 				</div>
 
 			<!-- second editor =================== -->
-				<!-- <div class="ace-bock">
+				<div class="ace-bock">
 					<div id="editor2" class="mousetrap">
-						<%#= @lesson.editable_code2 %>
+						<%= @lesson.editable_code2 %>
 					</div>
-				</div> -->
+				</div>
 
-			  <!-- <button id="editor-button2" type="submit" class="">submit</button>
+			  <button id="editor-button2" type="submit" class="">submit</button>
 			  <button id="reset-button2" type="submit" class="">reset</button>
-				<%#= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
+				<%= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
 			  <button id="notice-correct2" type="reset" class="">
 			  	Good job! Wasn't that easy?
-			  </button> -->
-			  <!-- <button id="alert-wrong2" type="reset" class="">
+			  </button>
+			  <button id="alert-wrong2" type="reset" class="">
 			  	Oops, not quite. Try using the short cut to fix the code.
-			  </button> -->
-				<!-- <div class="small-1 small-centered columns">
-					<p><a href="https://github.com/Bw00d"><%#= image_tag "octocat-pinkface.png", id: "octocat-link", alt: "octocat-logo" %></a></p>
-				</div> -->
+			  </button>
+				<div class="small-1 small-centered columns">
+					<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png", id: "octocat-link", alt: "octocat-logo" %></a></p>
+				</div>
 			</div>
   <!-- closing divs for offcanvas -->
 		</section>
