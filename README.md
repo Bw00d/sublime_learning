@@ -12,21 +12,22 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * I am able to add a Sublime Text keyboard binding and use it in the editor.
 * I am able to test edited code against answer code and return an alert or notice to the user depend on whether or not their input is correct.
 * I can assign the cursor to a specific line for each lesson
+* User authentication and validation complete.
+* Foundation offcanvas to works on lesson/show pages but not on others.  
 
 
 ####Todo
 
 * Make a consolidated js file of all the relevant key bindings.
 * I plan to use the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
-* Set up user authentication and validation.
 * Research whether or not I can just edit the vim keybindings instead of chaining methods to make Sublime keybindings.
-* Get Foundation offcanvas to work
 * Set editor height for each lesson
 * DRY up code so admin can add editors to code as necessary instead of having two editors per lesson.  
 
 ####Issues
 
-* The ace editor has many default keybindigs and some of them produce conflicting or unexpected behavior. 
+* The ace editor has many default keybindigs and some of them produce conflicting or unexpected behavior.
+* Foundation offcanvas to works on lesson/show pages but not on others. The javascript console complains of "Cannot read property 'env' of null" and references the ace.js file on the pages that don't work. This may be the cause. These pages do not contain an editor.
 * I am finding it difficult to get mousetrap to record keystrokes.
 * So far attempts to change the height of the editor for each lesson have caused the syntax highlighting to disappear and have had no effect on the editor height.
 * I am unable to get the offcanvas menu to work. The way the asset pipeline requires files may be causing a conflict. 
