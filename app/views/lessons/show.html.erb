@@ -4,7 +4,7 @@
 
     <section class="main-section">
 			<div class="large-9 large-centered columns lesson bottom-space">
-				<h2 class="center"><%#= @lesson.name %></h2>
+				<h2 class="center"><%= @lesson.name %></h2>
 				<div class="content bottom-space">
 					<%= markdown @lesson.content %>
 				</div>
@@ -31,9 +31,7 @@
 
 			<!-- first editor =========================================================== -->
 				<div class="ace-bock">
-					<div id="editor" class="mousetrap">
-						<%= @lesson.editable_code %>
-					</div>
+					<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
 				</div>
 			  <button id="editor-button" type="submit" class="">submit</button>
 			  <button id="reset-button" type="reset" class="">reset</button>
@@ -52,9 +50,7 @@
 
 			<!-- second editor =================== -->
 				<div class="ace-bock">
-					<div id="editor2" class="mousetrap">
-						<%= @lesson.editable_code2 %>
-					</div>
+					<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
 				</div>
 
 			  <button id="editor-button2" type="submit" class="">submit</button>
