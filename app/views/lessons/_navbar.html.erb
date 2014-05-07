@@ -18,6 +18,7 @@
       <ul class="off-canvas-list">
         <li><label>Lessons</label></li>
         <% if @lessons %>
+        <% @lessons.sort_by! { |lesson| lesson.number } %>
           <% @lessons.each do |lesson| %>
             <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
           <% end %>
@@ -29,6 +30,9 @@
       <ul class="off-canvas-list">
         <li><label>User</label></li>
         <% if signed_in? %>
+        <% if current_user.author %>
+        <li><%= link_to "Lessons", lessons_path %></li>
+        <% end %>
         <li><%= link_to "Logout", logout_path, method: "delete" %></li>
         <li><%= link_to "Help", "#" %></li>
         <% else %>
