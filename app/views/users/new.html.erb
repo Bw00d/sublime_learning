@@ -12,11 +12,10 @@
 			<h3>All Users</h3>
 				<ul>
 					<% @users.each do |user|  %>
-					<li><strong><%= user.name %></strong><br>
+					<li><strong><%= link_to user.name , user_path(user.id) %></strong>  
 						<% if user.author %>
-						<span class="author">author</span>
+						<span class="author">author</span></li>
 						<% end %>
-					</li>
 					<% end %>
 				</ul>
 		</div>
@@ -29,6 +28,7 @@
 	</div>
 </section>
 		<!-- closing divs for offcanvas -->
+		<div id="footer"></div>
 
 	 </div>
 </div>
