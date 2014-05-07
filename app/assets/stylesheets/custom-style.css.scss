@@ -277,10 +277,13 @@ body#sessions {
 /* footer */
 
 #footer {
-	height: 40px;
-	position: fixed;
-	bottom: 0;
-	background-color: black;
+
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 10px; /* choose any height */
+background-color: transparent;
+border: none;
 }
 
 /* forms */
