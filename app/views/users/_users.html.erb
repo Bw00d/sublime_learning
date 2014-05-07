@@ -1,0 +1,10 @@
+<li>
+	<%= link_to user.name, user_path(user.id) %>
+	<% if user.author %>
+						<span class="author">author</span></li>
+						<% end %>
+	<% if current_user.author || current_user?(user) %>
+	<%= link_to "edit", edit_user_path(user) %> | 
+	<%= link_to "delete", user, confirm: "You sure?", method: "delete" %></p>
+	<% end %>
+</li>	

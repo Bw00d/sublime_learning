@@ -1,0 +1,26 @@
+<% content_for(:title, @user.name) %>
+
+<%= render 'lessons/navbar' %>
+
+<section class="main-section">
+	<div class="drk-bckgrnd">
+		<div class="row top-div half-page">
+			<h3><%= @user.name %></h3>
+			<h5><%= @user.email %></h5>
+			<p><%= link_to "Edit", edit_user_path %> | <%= link_to "Delete", user_path(@user),
+												 confirm: "You sure?",
+												 method: "delete" %></p>
+		</div>
+
+	</div>
+		<div class="icon-container">
+			<div class="small-1 small-centered columns">
+				<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png", id: "octocat-link", alt: "octocat-logo" %></a></p>
+			</div>
+		</div>
+</section>
+<div id="footer"></div>
+
+		<!-- closing divs for offcanvas -->
+	 </div>
+</div>

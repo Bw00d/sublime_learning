@@ -295,3 +295,12 @@ body#sessions {
 .alert {
 	color: red;
 }
+.user-change {
+	font-size: .8em;
+	a {
+		color: green;
+	}
+	a:hover {
+		color: red;
+	}
+}
