@@ -17,6 +17,7 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label>Lessons</label></li>
+        <li><%= link_to "Lessons", lessons_path %></li>
         <% if @lessons %>
         <% @lessons.sort_by! { |lesson| lesson.number } %>
           <% @lessons.each do |lesson| %>
@@ -31,7 +32,8 @@
         <li><label>User</label></li>
         <% if signed_in? %>
         <% if current_user.author %>
-        <li><%= link_to "Lessons", lessons_path %></li>
+
+        <li><%= link_to "All users", users_path %></li>
         <% end %>
         <li><%= link_to "Logout", logout_path, method: "delete" %></li>
         <li><%= link_to "Help", "#" %></li>
