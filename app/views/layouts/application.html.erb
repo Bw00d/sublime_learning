@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag   "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %> 
+    <%= javascript_include_tag "foundation.min.js", "application" %>
 
   </head>
 
@@ -16,7 +17,5 @@
 
     <%= yield %>
     
-    <script src="foundation.min.js"></script>
-    <%= javascript_include_tag "http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js", "application" %>
   </body>
 </html>
