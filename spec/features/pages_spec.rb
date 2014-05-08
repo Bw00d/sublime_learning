@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 feature "homepage" do
+
 	before { @lesson = FactoryGirl.create(:lesson)}
 	before { visit root_url }
 	before { @lesson2 = FactoryGirl.create(:lesson) }

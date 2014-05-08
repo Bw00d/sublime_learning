@@ -31,10 +31,12 @@ describe "User pages" do
       end
 
       it "should create a user" do
+        current_lesson = FactoryGirl.create(:lesson) #necessary for redirect
         expect { click_button submit }.to change(User, :count).by(1)
       end
 
       describe "after saving the user" do
+        current_lesson = FactoryGirl.create(:lesson) #necessary for redirect
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
         before { click_link "right-menu"}
