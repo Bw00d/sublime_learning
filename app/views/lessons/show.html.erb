@@ -30,7 +30,7 @@
 				</p>
 
 			<!-- first editor =========================================================== -->
-				<div class="ace-bock">
+				<div class="ace-block">
 					<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
 				</div>
 			  <button id="editor-button" type="submit" class="">submit</button>
@@ -49,7 +49,7 @@
 				</div>
 
 			<!-- second editor =================== -->
-				<div class="ace-bock">
+				<div class="ace-block">
 					<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
 				</div>
 
@@ -73,6 +73,8 @@
 <!-- javascripts for the ace editor. They must not be in the asset pipeline or it causes other pages to malfunction -->
 
 <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js"></script>
+<!-- <script src="../vendor/assets/javascripts/ace.js"></script> -->
+<%#= javascript_tag "ace.js" %>
 
 <script type="text/javascript">
 	var editor2 = ace.edit("editor2");
