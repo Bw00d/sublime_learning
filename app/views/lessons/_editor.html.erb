@@ -1,6 +1,25 @@
-<div class="ace-block">
-	<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
-</div>
+<div class="row">
+				<form style="position: relative; margin-top: .5em;">
+					<textarea id=demotext>
+						class ContactsController < ApplicationController
 
-<button id="editor-button" type="submit" class="">submit</button>
-<button id="reset-button" type="reset" class="">reset</button>
+	def index
+		@contacts = Contact.all
+		
+		respond_to do |format|
+      format.html
+      format.json { render json: @contacts }
+    end
+	end
+
+	def show
+		@contact = Contact.find(params[:id])
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @contact}
+		end
+	end
+				</textarea>
+			  </form>
+			</div>
