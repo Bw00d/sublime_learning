@@ -30,7 +30,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 
 ####Usage
 
-It is easy to get started building lessons. There is no new lesson link so navigate to the lessons/new to create a new lesson. At this time there is also no authentication to worry about. 
+It is easy to get started building lessons. Once you clone the repository run 'rake db:populate' this will will create an admin user and a single lesson. Sigin and go to the lessons page to edit that lesson or create a new one. At the moment there must be two lessons in the database to show a lesson, otherwise you will get a "No more lessons" notice. 
 
 Each lesson has two two editors which allows for two examples.  At the moment it is necessary to enter content into each editor or it will break the page.  I have tried to disable the second editor when @lesson.content2 is nil but it messes with the remaining editor's styling so until I fix that bug just make two examples.
 
@@ -39,7 +39,7 @@ The content, editable_code, and answer <strong>must</strong> be entered as markd
 The edited code and the answer have to be exactly the same to past the test. 
 
 ####Keybindings
-**Note** Currently keybindings only work on Mac. I will update with Windows keybings soon.
+**Note** I've added the Windows keybindings and they will only display on windows machines.
 * delete line :  shft+ctrl+k
 * delete to end of line : ctrl+k
 * indent :  dmc+] !note: the indent() only indent from cursor. blockIndent() is the method that should move the entire line, however, it does not work.
