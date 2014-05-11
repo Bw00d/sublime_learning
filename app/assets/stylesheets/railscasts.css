@@ -1,0 +1,35 @@
+/* Based on Sublime Text's Monokai theme */
+
+.cm-s-railscasts.CodeMirror {background: #2B2B2B; color: #f8f8f2;}
+.cm-s-railscasts div.CodeMirror-selected {background: #545D73 !important;
+																					-moz-border-radius: 3px;
+																					-webkit-border-radius: 3px;
+																					border-radius: 3px; 
+																					-khtml-border-radius: 3px;}
+.cm-s-railscasts .CodeMirror-gutters {background: #2B2B2B; border-right: 0px;}
+.cm-s-railscasts .CodeMirror-linenumber {color: #888683;}
+.cm-s-railscasts .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+
+.cm-s-railscasts span.cm-comment {color: #bc9457;}
+.cm-s-railscasts span.cm-atom {color: #6d9cbe;}
+.cm-s-railscasts span.cm-number {color: #ae81ff;}
+.cm-s-railscasts span.cm-operator {color: #cc7732;}
+
+.cm-s-railscasts span.cm-property, .cm-s-railscasts span.cm-attribute {color: #a6e22e;}
+.cm-s-railscasts span.cm-keyword {color: #cc7732;}
+.cm-s-railscasts span.cm-string {color: #a5c261;}
+.cm-s-railscasts .cm-string-2 {color: green;}
+
+.cm-s-railscasts span.cm-variable {color: #da493a;}
+.cm-s-railscasts span.cm-variable-2 {color: #d0d0ff;}
+.cm-s-railscasts span.cm-def {color: #ffc669;}
+.cm-s-railscasts span.cm-bracket {color: #f8f8f2;}
+.cm-s-railscasts span.cm-tag {color: #ffffff;}
+.cm-s-railscasts span.cm-link {color: #ae81ff;}
+.cm-s-railscasts span.cm-error {background: #f92672; color: #f8f8f0;}
+
+.cm-s-railscasts .CodeMirror-activeline-background {background: #232323 !important;}
+.cm-s-railscasts .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}

@@ -16,6 +16,10 @@
 //= require mousetrap/global
 //= require mousetrap/dictionary
 //= require mousetrap/record 
+//= require codemirror
+//= require active-line
+//= require ruby
+//= require sublime
 //= require foundation
 //= require_tree .
 

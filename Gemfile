@@ -11,6 +11,7 @@ gem 'redcarpet'
 gem 'mousetrap-rails'
 gem 'bcrypt'
 gem 'ace-rails-ap'
+gem 'codemirror-rails'
 
 group :development do
   gem 'better_errors'

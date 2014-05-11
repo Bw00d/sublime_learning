@@ -5,7 +5,7 @@
 		<div class="more-info">
 			<div class="row">
 				<div class="no-lesson">
-				<div class="small-12 small-centered columns">
+					<div class="small-12 small-centered columns">
 						<h3><strong>That's all for now!</strong></h3>
 						<p>I hope you enjoyed this resource.</p>
 						<p>I will add more lessons when I get some free time.</p>
@@ -13,7 +13,32 @@
 						<p class="tight-bottom">If you would like to help out with either making new lessons or improving the code checkout it out on <a href="https://github.com/Bw00d/sublime_learning">Github</a>.</p>
 					</div>
 				</div>
-				</div>
+			</div>
+			<div class="row">
+				<form style="position: relative; margin-top: .5em;">
+					<textarea id=demotext>
+						class ContactsController < ApplicationController
+
+	def index
+		@contacts = Contact.all
+		
+		respond_to do |format|
+      format.html
+      format.json { render json: @contacts }
+    end
+	end
+
+	def show
+		@contact = Contact.find(params[:id])
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @contact}
+		end
+	end
+				</textarea>
+			  </form>
+			</div>
 			<div class="row">
 				<div class="small-1 small-centered columns">
 					<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png" %></a></p>
@@ -23,3 +48,13 @@
 	<!-- closing divs for offcanvas -->
 	 </div>
 </div>
+			  <script>
+			    var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
+			      lineNumbers: true,
+			      mode: "ruby",
+			      matchBrackets: true,
+			      indentUnit: 2,
+			      theme : 'railscasts',
+			      keyMap: "sublime"
+			    });
+			  </script>
