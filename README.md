@@ -10,7 +10,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * I am able to create lessons.  Each lesson has a name, chapter id, content(which is inputted as markdown and retrieved with the <a href="https://github.com/vmg/redcarpet">redcarpet</a> gem so it can be styled), an editable code block(also markdown), and an answer code block which will be used to compare the result of the user input.
 * The <a heref="">ace editor</a> is embedded and will allow the user to practice editing the editable code block.
 * I am able to add a Sublime Text keyboard binding and use it in the editor.
-* I am able to test edited code against answer code and return an alert or notice to the user depend on whether or not their input is correct.
+* I am able to test edited code against answer code and return an alert or notice to the user depending on whether or not their input is correct.
 * I can assign the cursor to a specific line for each lesson
 * User authentication and validation complete.
 
