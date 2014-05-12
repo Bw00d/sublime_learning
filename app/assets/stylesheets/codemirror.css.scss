@@ -8,7 +8,8 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family: 'VeraMono', monospace !important;
-  height: 300px;
+  height: auto;
+  min-height: 250px;
   font-size: .6em !important;
 }
 .CodeMirror-scroll {
@@ -38,12 +39,13 @@
 }
 .CodeMirror-linenumbers {}
 .CodeMirror-linenumber {
-  padding: 0 3px 0 5px;
+  padding: 0 11px 0 8px;
   min-width: 20px;
   text-align: right;
   color: #999;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  font-size: .9em;
 }
 
 /* CURSOR */
@@ -115,7 +117,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
    the editor. You probably shouldn't touch them. */
 
 .CodeMirror {
-  line-height: 1;
+  line-height: 1.3;
   position: relative;
   overflow: hidden;
   background: white;

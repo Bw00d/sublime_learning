@@ -17,26 +17,26 @@
 			<%= render 'editor' %>
 			<!-- <div class="row">
 				<form style="position: relative; margin-top: .5em;">
-					<textarea id=demotext>
-						class ContactsController < ApplicationController
+					<textarea id=demotext>  
+					class ContactsController < ApplicationController  
+						def index
+							@contacts = Contact.all
+							
+							respond_to do |format|
+					      format.html
+					      format.json { render json: @contacts }
+					    end
+						end
 
-	def index
-		@contacts = Contact.all
-		
-		respond_to do |format|
-      format.html
-      format.json { render json: @contacts }
-    end
-	end
+						def show
+							@contact = Contact.find(params[:id])
 
-	def show
-		@contact = Contact.find(params[:id])
-
-		respond_to do |format|
-			format.html
-			format.json { render json: @contact}
-		end
-	end
+							respond_to do |format|
+								format.html
+								format.json { render json: @contact}
+							end
+						end
+					end
 				</textarea>
 			  </form>
 			</div> -->
@@ -56,6 +56,8 @@
 			      matchBrackets: true,
 			      indentUnit: 2,
 			      theme : 'railscasts',
-			      keyMap: "sublime"
+			      keyMap: "sublime",
+			      tabSize: 2,
+			      activeLine: true
 			    });
 			  </script>

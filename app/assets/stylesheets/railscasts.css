@@ -6,8 +6,8 @@
 																					-webkit-border-radius: 3px;
 																					border-radius: 3px; 
 																					-khtml-border-radius: 3px;}
-.cm-s-railscasts .CodeMirror-gutters {background: #2B2B2B; border-right: 0px;}
-.cm-s-railscasts .CodeMirror-linenumber {color: #888683;}
+.cm-s-railscasts .CodeMirror-gutters {background: #3B3B3B; border-right: 0px;}
+.cm-s-railscasts .CodeMirror-linenumber {color: #ffffff;}
 .cm-s-railscasts .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
 
 .cm-s-railscasts span.cm-comment {color: #bc9457;}
