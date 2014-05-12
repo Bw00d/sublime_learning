@@ -157,12 +157,13 @@ code {
 // 	height: 100%;
 // 	display: inline-block;
 // }
-#editor {
+#cm-editor {
 	position: relative;
-	font-size: .8em;
+	font-size: inherit;
 	padding-bottom: 5px;
 	width: 100%;
-	height: 200px;
+	height: auto;
+	min-height: 200px;
 	margin-bottom: 15px;
 	line-height: 1.5em;
 	overflow-x: hidden;
@@ -312,3 +313,4 @@ border: none;
 		color: red;
 	}
 }
+

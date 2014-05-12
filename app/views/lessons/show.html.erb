@@ -15,51 +15,19 @@
 				<p id="line-number">
 					<%= @lesson.line_number %>
 				</p>
-				<p id="editor-height">
-					<%= @lesson.editor_height %>
-				</p>
+				
+					<div id="cm-editor">
+						<%= render 'editor' %>
+					</div>
+		
 
-				<p id="answer-block2">
-					<%= @lesson.answer2 %>
-				</p>
-				<p id="line-number2">
-					<%= @lesson.line_number2 %>
-				</p>
-				<p id="editor-height2">
-					<%= @lesson.editor_height2 %>
-				</p>
-
-			<!-- first editor =========================================================== -->
-				<div class="ace-block">
-					<div id="editor" class="mousetrap"><%= @lesson.editable_code %></div>
-				</div>
-			  <!-- end of editor -->
 			  <button id="editor-button" type="submit" class="">submit</button>
-			  <button id="reset-button" type="reset" class="">reset</button>
-
+			  <button id="reset-button" type="submit" class="">reset</button>
+				<%= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
 			  <button id="notice-correct" type="reset" class="">
 			  	Good job! Wasn't that easy?
 			  </button>
 			  <button id="alert-wrong" type="reset" class="">
-			  	Oops, not quite. Try using the short cut to fix the code.
-			  </button>
-
-				<div class="content bottom-space">
-					<%=  markdown @lesson.content2 %>
-				</div>
-
-			<!-- second editor =================== -->
-				<div class="ace-block">
-					<div id="editor2" class="mousetrap"><%= @lesson.editable_code2 %></div>
-				</div>
-
-			  <button id="editor-button2" type="submit" class="">submit</button>
-			  <button id="reset-button2" type="submit" class="">reset</button>
-				<%= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
-			  <button id="notice-correct2" type="reset" class="">
-			  	Good job! Wasn't that easy?
-			  </button>
-			  <button id="alert-wrong2" type="reset" class="">
 			  	Oops, not quite. Try using the short cut to fix the code.
 			  </button>
 				<div class="small-1 small-centered columns">
@@ -70,200 +38,16 @@
   <!-- closing divs for offcanvas -->
 			</div>
   </div>
-<!-- javascripts for the ace editor. They must not be in the asset pipeline or it causes other pages to malfunction -->
 
-<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js"></script>
-<!-- <script src="../vendor/assets/javascripts/ace.js"></script> -->
-<%#= javascript_tag "ace.js" %>
-
-<script type="text/javascript">
-	var editor2 = ace.edit("editor2");
-
-	editor2.commands.addCommand({
-		name: 'swap_line_up',
-		bindKey: { win: 'Ctrl-Shift-Up', mac: 'Ctrl-Command-Up'},
-		exec: function(editor2) {
-		     editor2.moveLinesUp();
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'swap_line_down',
-		bindKey: { win: 'Ctrl-Shift-Down', mac: 'Ctrl-Command-Down'},
-		exec: function(editor2) {
-		     editor2.moveLinesDown();
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'add_line_down',
-		bindKey: { mac: 'Command-Return'},
-		exec: function(editor2) {
-		     editor2.navigateLineEnd()
-		     editor2.splitLine();
-		     editor2.navigateDown(1);
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'add_line_above',
-		bindKey: { mac: 'Shift-Command-Return'},
-		exec: function(editor2) {
-		     editor2.navigateLineStart()
-		     editor2.splitLine();
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'indent',
-		bindKey: { win: 'Ctrl-]', mac: 'Command-]'},
-		exec: function(editor2) {
-		      editor2.indent()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'unindent',
-		bindKey: { win: 'Ctrl-[', mac: 'Command-['},
-		exec: function(editor2) {
-		      editor2.blockOutdent()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'delete_line',
-		bindKey: { win: 'Ctrl-Shift-k', mac: 'Shift-Ctrl-k'},
-		exec: function(editor2) {
-		      editor2.removeLines()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'delete_to_end_of_line',
-		bindKey: { win: 'Ctrl-k', mac: 'Ctrl-k'},
-		exec: function(editor2) {
-		      editor2.removeToLineEnd()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor2.commands.addCommand({
-		name: 'toggle_block_comment',
-		bindKey: { win: 'Ctrl-Shift-/', mac: 'Command-Option-/'},
-		exec: function(editor2) {
-		      editor2.toggleBlockComment()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-</script>
-<script type="text/javascript">
-	var editor = ace.edit("editor");
-	editor.commands.addCommand({
-		name: 'swap_line_up',
-		bindKey: { win: 'Ctrl-Shift-Up', mac: 'Ctrl-Command-Up'},
-		exec: function(editor) {
-		     editor.moveLinesUp();
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'swap_line_down',
-		bindKey: { win: 'Ctrl-Shift-Down', mac: 'Ctrl-Command-Down'},
-		exec: function(editor) {
-		     editor.moveLinesDown();
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'add_line_down',
-		bindKey: { mac: 'Command-Return'},
-		exec: function(editor) {
-		     editor.navigateLineEnd()
-		     editor.splitLine();
-		     editor.navigateDown(1);
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'add_line_above',
-		bindKey: { mac: 'Shift-Command-Return'},
-		exec: function(editor) {
-		      editor.navigateLineStart()
-		     editor.splitLine();
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'indent',
-		bindKey: { win: 'Ctrl-]', mac: 'Command-]'},
-		exec: function(editor) {
-		      editor.indent()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'unindent',
-		bindKey: { win: 'Ctrl-[', mac: 'Command-['},
-		exec: function(editor) {
-		      editor.blockOutdent()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'delete_line',
-		bindKey: { win: 'Ctrl-Shift-k', mac: 'Shift-Ctrl-k'},
-		exec: function(editor) {
-		      editor.removeLines()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'delete_to_end_of_line',
-		bindKey: { win: 'Ctrl-k', mac: 'Ctrl-k'},
-		exec: function(editor) {
-		      editor.removeToLineEnd()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-	editor.commands.addCommand({
-		name: 'toggle_block_comment',
-		bindKey: { win: 'Ctrl-Shift-/', mac: 'Command-Option-/'},
-		exec: function(editor) {
-		      editor.toggleBlockComment()
-		},
-		readOnly: false // false if this command should not apply in readOnly mode
-	});
-</script>
-
-
-<script type="text/javascript">
-	var line2 = $('#line-number2').text();
-	var editor2 = ace.edit("editor2");
-
-	editor2.getSession().setUseWorker(false);
-	editor2.getSession().setMode("ace/mode/ruby");
-	editor2.setTheme("ace/theme/idle_fingers");
-	editor2.gotoLine(line2);
-	editor2.getSession().setTabSize(2);
-
-	//keybindings are in their own files.
-
-	editor2.getSession().on('change', function(e) {
-
-	});
-
-	// This editor will be active first
-	var line = $('#line-number').text();
-	var editor = ace.edit("editor");
-
-	editor.getSession().setUseWorker(false);
-	editor.setTheme("ace/theme/idle_fingers");
-	editor.getSession().setMode("ace/mode/ruby");
-	editor.gotoLine(line);
-	editor.getSession().setTabSize(2);
-
-	//keybindings are in their own files.
-
-	editor.getSession().on('change', function(e) {
-
-	});
+<script>
+  var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
+    lineNumbers: true,
+    mode: "ruby",
+    matchBrackets: true,
+    indentUnit: 2,
+    theme : 'railscasts',
+    keyMap: "sublime",
+    tabSize: 2,
+    activeLine: true
+  });
 </script>
