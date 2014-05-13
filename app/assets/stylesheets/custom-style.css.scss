@@ -151,12 +151,10 @@ code {
 	height: 150px !important;
 	}
 }
-// .ace-block {
-// 	padding:0;
-// 	font-size: .8em;
-// 	height: 100%;
-// 	display: inline-block;
-// }
+#cm-form {
+	position: relative; 
+	margin-top: .5em;
+}
 #cm-editor {
 	position: relative;
 	font-size: inherit;
