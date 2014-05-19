@@ -1,0 +1,25 @@
+// $(document).ready(function() {
+	$('#editor-button').click( function() {
+		$('#editor-button').hide();
+		$('#reset-button').show();
+		editor = $("#lesson-text");
+		console.log(editor)
+		input = editor.getValue().trim();
+		answer = $('#answer-block').html().trim();
+		console.log(answer);
+		console.log(input);
+		result = answer.localeCompare(input);
+		if (result == 0 ) {
+			$('#notice-correct').show();
+		} else {
+			$('#alert-wrong').show();
+		}
+	});
+	$('#reset-button').click( function(event) {
+		event.preventDefault();
+		$('#reset-button').hide();
+		$('#editor-button').show();
+		location.reload();
+	});
+
+// });

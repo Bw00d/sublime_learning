@@ -10,7 +10,7 @@
 				</div>
 
 				<p id="answer-block">
-					<%= @lesson.answer %>
+		<%= @lesson.answer %>
 				</p>
 				<p id="line-number">
 					<%= @lesson.line_number %>
@@ -40,6 +40,7 @@
   </div>
 
 <script>
+$(document).ready(function() {
   var editor = CodeMirror.fromTextArea(document.getElementById("lesson-text"), {
     lineNumbers: true,
     mode: "ruby",
@@ -50,4 +51,30 @@
     tabSize: 2,
     activeLine: true
   });
+
+	$('#editor-button').click( function() {
+		$('#editor-button').hide();
+		$('#reset-button').show();
+		// editor = $("#lesson-text");
+		input = editor.getValue().trim();
+		answer = $('#answer-block').html().trim();
+		console.log(answer);
+		console.log(input);
+		result = answer.localeCompare(input);
+		if (result == 0 ) {
+			$('#notice-correct').show();
+			$('#next').removeClass('inactive');
+			$('#next').addClass('active');
+		} else {
+			$('#alert-wrong').show();
+		}
+	});
+	$('#reset-button').click( function(event) {
+		event.preventDefault();
+		$('#reset-button').hide();
+		$('#editor-button').show();
+		location.reload();
+	});
+
+});
 </script>

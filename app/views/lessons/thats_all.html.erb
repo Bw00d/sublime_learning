@@ -14,7 +14,7 @@
 					</div>
 				</div>
 			</div>
-			<%= render 'editor' %>
+
 		
 			<div class="row">
 				<div class="small-1 small-centered columns">
@@ -25,15 +25,3 @@
 	<!-- closing divs for offcanvas -->
 	 </div>
 </div>
-			  <script>
-			    var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
-			      lineNumbers: true,
-			      mode: "ruby",
-			      matchBrackets: true,
-			      indentUnit: 2,
-			      theme : 'railscasts',
-			      keyMap: "sublime",
-			      tabSize: 2,
-			      activeLine: true
-			    });
-			  </script>

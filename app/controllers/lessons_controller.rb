@@ -20,12 +20,12 @@ class LessonsController < ApplicationController
 	def show
 		@lessons = Lesson.all
 		@lesson = Lesson.find(params[:id])
-		if @lesson.next == nil
+		# if @lesson.next == nil
 			# render('lessons/no_lesson.html.erb')
-			redirect_to lessons_thats_all_path
-		else
-			@lesson
-		end
+			# redirect_to lessons_thats_all_path
+		# else
+			# @lesson
+		# end
 	end
 
 	def create
