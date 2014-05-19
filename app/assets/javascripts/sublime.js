@@ -99,7 +99,7 @@
     cm.setSelections(extended);
   };
 
-  map["Shift-" + ctrl + "K"] = "deleteLine";
+  map["Shift-" + "Ctrl-" + "K"] = "deleteLine";
 
   function insertLine(cm, above) {
     cm.operation(function() {
@@ -128,7 +128,7 @@
     return {from: Pos(pos.line, start), to: Pos(pos.line, end), word: line.slice(start, end)};
   }
 
-  cmds[map[ctrl + "D"] = "selectNextOccurrence"] = function(cm) {
+  cmds[map["ctrl" + "D"] = "selectNextOccurrence"] = function(cm) {
     var from = cm.getCursor("from"), to = cm.getCursor("to");
     var fullWord = cm.state.sublimeFindFullWord == cm.doc.sel;
     if (CodeMirror.cmpPos(from, to) == 0) {
@@ -403,7 +403,7 @@
     });
   }
 
-  mapK[ctrl + "Backspace"] = "delLineLeft";
+  mapK[Cmd + "Backspace"] = "delLineLeft";
 
   cmds[mapK[ctrl + "K"] = "delLineRight"] = function(cm) {
     cm.operation(function() {
@@ -457,7 +457,7 @@
     cm.scrollTo(null, (pos.top + pos.bottom) / 2 - cm.getScrollInfo().clientHeight / 2);
   };
 
-  cmds[map["Shift-Alt-Up"] = "selectLinesUpward"] = function(cm) {
+  cmds[map["Shift-Ctrl-Up"] = "selectLinesUpward"] = function(cm) {
     cm.operation(function() {
       var ranges = cm.listSelections();
       for (var i = 0; i < ranges.length; i++) {
@@ -467,7 +467,7 @@
       }
     });
   };
-  cmds[map["Shift-Alt-Down"] = "selectLinesDownward"] = function(cm) {
+  cmds[map["Shift-Ctrl-Down"] = "selectLinesDownward"] = function(cm) {
     cm.operation(function() {
       var ranges = cm.listSelections();
       for (var i = 0; i < ranges.length; i++) {
