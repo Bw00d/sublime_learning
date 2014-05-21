@@ -25,8 +25,11 @@ CodeMirror.defineMode("ruby", function(config) {
   var indentWords = wordObj(["def", "class", "case", "for", "while", "module", "then",
                              "catch", "loop", "proc", "begin"]);
   var dedentWords = wordObj(["end", "until"]);
+  var method = wordObj(["find"]);
+  var paths = wordObj(["users"])
   var matching = {"[": "]", "{": "}", "(": ")"};
   var curPunc;
+
 
   function chain(newtok, stream, state) {
     state.tokenize.push(newtok);

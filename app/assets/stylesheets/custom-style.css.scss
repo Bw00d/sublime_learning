@@ -34,16 +34,26 @@ h1 {
 	padding: 15px 50px;
 	background-color: white;
 	font-size: 1.3em;
+	line-height: 21px;
+	font-family: Helvetica, Ariel, 'sans-serif';
 	box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.5);
 	h1 {
 		text-align: center;
 		color: black;
+		background-color: #E7E7E7;
+		padding: 15px 0 ;
+		font-family: 'Lora', serif !important;
 	}
 	h3 {
 		text-align: center;
 		color: #C3C3C3;
 		margin-top: -40px;
 	}
+}
+h1#lesson-name {
+		font-family: 'Lora', serif !important;
+		font-weight: bold;
+		background-color: white;
 }
 .mac .lesson {
 	h3 {
@@ -162,6 +172,7 @@ code {
 	width: 100%;
 	height: auto;
 	min-height: 200px;
+	margin-top: -20px;
 	margin-bottom: 15px;
 	line-height: 1.5em;
 	overflow-x: hidden;
@@ -180,6 +191,19 @@ code {
 }
 .tight-bottom {
 	margin-bottom: -10px;
+}
+
+.edit-page {
+	color: #3879d9 !important;
+	input {
+		border: 1px solid #3879d9;
+	}
+	form {
+		color: #3879d9;
+	}
+	textarea {
+		border: 1px solid #3879d9;
+	}
 }
 
 

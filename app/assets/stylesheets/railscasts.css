@@ -1,4 +1,4 @@
-/* Based on Sublime Text's Monokai theme */
+/* Based on Sublime Text's Railscasts theme */
 
 .cm-s-railscasts.CodeMirror {background: #2B2B2B; color: #f8f8f2;}
 .cm-s-railscasts div.CodeMirror-selected {background: #545D73 !important;
@@ -17,6 +17,7 @@
 
 .cm-s-railscasts span.cm-property, .cm-s-railscasts span.cm-attribute {color: #a6e22e;}
 .cm-s-railscasts span.cm-keyword {color: #cc7732;}
+.cm-s-railscasts span.cm-method {color: #ffffff;}
 .cm-s-railscasts span.cm-string {color: #a5c261;}
 .cm-s-railscasts .cm-string-2 {color: green;}
 

@@ -4,8 +4,8 @@
 
     <section class="main-section">
 			<div class="large-9 large-centered columns lesson bottom-space">
-				<h2 class="center"><%= @lesson.name %></h2>
-				<div class="content bottom-space">
+				<h1 id="lesson-name" class="center"><%= @lesson.name %></h1>
+				<div class="content">
 					<%= markdown @lesson.content %>
 				</div>
 

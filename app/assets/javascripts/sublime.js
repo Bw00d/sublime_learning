@@ -99,7 +99,7 @@
     cm.setSelections(extended);
   };
 
-  map["Shift-" + "Ctrl-" + "K"] = "deleteLine";
+  map["Shift-" + "Ctrl-"+ "K"] = "deleteLine";
 
   function insertLine(cm, above) {
     cm.operation(function() {
