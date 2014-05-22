@@ -1,13 +1,13 @@
 /* BASICS */
 
-@font-face {
-        font-family: 'VeraMono';
-        src: url('VeraMono.ttf') format("truetype");
-    }
+// @font-face {
+//         font-family: 'VeraMono';
+//         src: url('VeraMono.ttf') format("truetype");
+//     }
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: 'VeraMono', monospace !important;
+  font-family:  monospace !important; /*'VeraMono' would be nice */
   height: auto;
   min-height: 250px;
   font-size: .8em !important;

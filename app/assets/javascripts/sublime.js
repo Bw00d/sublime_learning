@@ -403,7 +403,7 @@
     });
   }
 
-  mapK[Cmd + "Backspace"] = "delLineLeft";
+  mapK['Cmd' + "Backspace"] = "delLineLeft";
 
   cmds[mapK[ctrl + "K"] = "delLineRight"] = function(cm) {
     cm.operation(function() {
