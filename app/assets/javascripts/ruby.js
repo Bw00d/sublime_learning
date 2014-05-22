@@ -30,7 +30,6 @@ CodeMirror.defineMode("ruby", function(config) {
   var matching = {"[": "]", "{": "}", "(": ")"};
   var curPunc;
 
-
   function chain(newtok, stream, state) {
     state.tokenize.push(newtok);
     return newtok(stream, state);
