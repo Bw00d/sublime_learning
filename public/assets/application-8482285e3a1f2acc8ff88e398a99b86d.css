@@ -7842,6 +7842,472 @@ a[data-keybinding] .mt-hotkey-hint {
     -o-transform: scale(1.25);
     -ms-transform: scale(1.25);
     transform: scale(1.25); }
+/* BASICS */
+@font-face {
+  font-family: 'VeraMono';
+  src: url("VeraMono.ttf") format("truetype");
+}
+
+/* line 9, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: 'VeraMono', monospace !important;
+  height: auto;
+  min-height: 250px;
+  font-size: .8em !important;
+}
+
+/* line 16, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-scroll {
+  /* Set scrolling behaviour here */
+  overflow: auto;
+}
+
+/* PADDING */
+/* line 23, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-lines {
+  padding: 4px 0;
+  /* Vertical padding around content */
+}
+
+/* line 26, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror pre {
+  padding: 0 4px;
+  /* Horizontal padding of content */
+}
+
+/* line 30, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white;
+  /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+/* line 36, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+
+/* line 42, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-linenumber {
+  padding: 0 11px 0 8px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font-size: .9em;
+}
+
+/* CURSOR */
+/* line 54, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid black;
+}
+
+/* Shown when moving in bi-directional text */
+/* line 58, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+
+/* line 61, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor {
+  width: auto;
+  border: 0;
+  background: #7e7;
+}
+
+/* Can style cursor different in overwrite (non-insert) mode */
+/* line 69, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-tab {
+  display: inline-block;
+}
+
+/* line 71, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  position: absolute;
+}
+
+/* DEFAULT THEME */
+/* line 78, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-keyword {
+  color: #708;
+}
+
+/* line 79, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-atom {
+  color: #219;
+}
+
+/* line 80, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-number {
+  color: #164;
+}
+
+/* line 81, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-def {
+  color: #00f;
+}
+
+/* line 86, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-variable-2 {
+  color: #05a;
+}
+
+/* line 87, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-variable-3 {
+  color: #085;
+}
+
+/* line 88, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-comment {
+  color: #a50;
+}
+
+/* line 89, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-string {
+  color: #a11;
+}
+
+/* line 90, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-string-2 {
+  color: #f50;
+}
+
+/* line 91, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-meta {
+  color: #555;
+}
+
+/* line 92, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-qualifier {
+  color: #555;
+}
+
+/* line 93, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-builtin {
+  color: #30a;
+}
+
+/* line 94, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-bracket {
+  color: #997;
+}
+
+/* line 95, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-tag {
+  color: #170;
+}
+
+/* line 96, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-attribute {
+  color: #00c;
+}
+
+/* line 97, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-header {
+  color: blue;
+}
+
+/* line 98, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-quote {
+  color: #090;
+}
+
+/* line 99, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-hr {
+  color: #999;
+}
+
+/* line 100, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-link {
+  color: #00c;
+}
+
+/* line 102, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-negative {
+  color: #d44;
+}
+
+/* line 103, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-positive {
+  color: #292;
+}
+
+/* line 104, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-header, .cm-strong {
+  font-weight: bold;
+}
+
+/* line 105, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-em {
+  font-style: italic;
+}
+
+/* line 106, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-link {
+  text-decoration: underline;
+}
+
+/* line 108, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-s-default .cm-error {
+  color: #f00;
+}
+
+/* line 109, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-invalidchar {
+  color: #f00;
+}
+
+/* line 111, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0f0;
+}
+
+/* line 112, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: #f22;
+}
+
+/* line 113, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-activeline-background {
+  background: #232323;
+}
+
+/* STOP */
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+/* line 120, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror {
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  color: black;
+}
+
+/* line 128, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-scroll {
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px;
+  margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: none;
+  /* Prevent dragging from highlighting the element */
+  position: relative;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 139, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 30px solid transparent;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actuall scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+/* line 149, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+
+/* line 154, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-vscrollbar {
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 159, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-hscrollbar {
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* line 164, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-scrollbar-filler {
+  right: 0;
+  bottom: 0;
+}
+
+/* line 167, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-gutter-filler {
+  left: 0;
+  bottom: 0;
+}
+
+/* line 171, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-gutters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-bottom: 30px;
+  z-index: 3;
+}
+
+/* line 176, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding-bottom: 30px;
+  margin-bottom: -32px;
+  display: inline-block;
+  /* Hack to make IE7 behave */
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 188, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+
+/* line 194, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-lines {
+  cursor: text;
+}
+
+/* line 197, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror pre {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+}
+
+/* line 213, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+/* line 219, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* line 225, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+}
+
+/* line 233, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: hidden;
+}
+
+/* line 237, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 244, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-measure pre {
+  position: static;
+}
+
+/* line 246, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror div.CodeMirror-cursor {
+  position: absolute;
+  border-right: none;
+  width: 0;
+}
+
+/* line 252, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 257, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+
+/* line 261, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-selected {
+  background: #d9d9d9;
+}
+
+/* line 262, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-focused .CodeMirror-selected {
+  background: #d7d4f0;
+}
+
+/* line 263, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror-crosshair {
+  cursor: crosshair;
+}
+
+/* line 265, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-searching {
+  background: #ffa;
+  background: rgba(255, 255, 0, 0.4);
+}
+
+/* IE7 hack to prevent it from returning funny offsetTops on the spans */
+/* line 271, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.CodeMirror span {
+  *vertical-align: text-bottom;
+}
+
+/* Used to force a border model for a node */
+/* line 274, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+.cm-force-border {
+  padding-right: .1px;
+}
+
+@media print {
+  /* Hide the cursor when printing */
+  /* line 278, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/codemirror.css.scss */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
 .orange {
 	color: #CC732D
 }
@@ -7885,38 +8351,55 @@ h1 {
   padding: 15px 50px;
   background-color: white;
   font-size: 1.3em;
+  line-height: 21px;
+  font-family: Helvetica, Ariel, 'sans-serif';
   box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.5);
 }
-/* line 38, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 40, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .lesson h1 {
   text-align: center;
   color: black;
+  background-color: #E7E7E7;
+  padding: 15px 0;
+  font-family: 'Lora', serif !important;
 }
-/* line 42, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 47, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .lesson h3 {
   text-align: center;
   color: #C3C3C3;
   margin-top: -40px;
 }
 
-/* line 49, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 53, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+h1#lesson-name {
+  font-family: 'Lora', serif !important;
+  font-weight: bold;
+  background-color: white;
+}
+
+/* line 59, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+.mac .lesson h3 {
+  display: none;
+}
+
+/* line 64, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .menu li {
   margin-bottom: 8px;
 }
 
-/* line 53, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 68, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #new-lesson {
   border: solid 1px #DDDDDD;
   padding: 20px;
 }
 
-/* line 58, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 73, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 company {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 62, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 77, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .main-page {
   /*width: 100%;*/
   min-height: 410px;
@@ -7927,14 +8410,14 @@ company {
   padding-bottom: 2%;
 }
 
-/* line 71, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 86, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .main-title {
   background-color: #2B2B2B;
   font-size: 2.5em;
   padding-left: 5%;
 }
 
-/* line 76, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 91, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .start-button {
   margin-top: 2%;
   font-size: 1.5em;
@@ -7943,79 +8426,79 @@ company {
   position: relative;
 }
 
-/* line 83, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 98, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 code {
   font-weight: normal;
   background-color: #2B2B2B;
   line-height: 1.3em;
 }
 
-/* line 88, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 103, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .more-info {
   padding-top: 25px;
   font-size: 2em;
   background-color: #EDECE4;
 }
-/* line 92, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 107, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .more-info p {
   font-size: .8em;
   color: #2b2b2b;
 }
-/* line 96, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 111, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .more-info a {
   color: #008cba;
 }
-/* line 99, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 114, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .more-info a:hover {
   color: red;
   text-decoration: none;
 }
 
-/* line 104, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 119, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .test {
   background-color: red;
 }
 
-/* line 107, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 122, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .button {
   font-size: .9em !important;
 }
 
-/* line 110, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 125, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .content-field {
   height: 200px;
 }
 
-/* line 113, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 128, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .editable-code-field {
   height: 200px;
 }
 
-/* line 116, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 131, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .answer-field {
   height: 150px;
 }
 
-/* line 119, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 134, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .content {
   margin-top: 20px;
 }
 
-/* line 122, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 137, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .code-block {
   background-color: #232323;
   padding: 10px 20px;
   font-size: .8em;
 }
 
-/* line 127, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 142, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #edit-code {
   font-size: .8em;
   margin: 25px 0 0 0;
   height: 200px;
   width: 100%;
 }
-/* line 133, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 148, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #edit-code textarea {
   padding: 10px 20px;
   font-size: 1em;
@@ -8027,32 +8510,32 @@ code {
   border: none;
 }
 
-/* line 145, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 160, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #editable-form input {
   height: 150px !important;
 }
 
-/* line 149, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
-.ace-block {
-  padding: 0;
-  font-size: .8em;
-  height: 100%;
-  display: inline-block;
+/* line 164, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+#cm-form {
+  position: relative;
+  margin-top: .5em;
 }
 
-/* line 155, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
-#editor {
+/* line 168, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+#cm-editor {
   position: relative;
-  font-size: .8em;
+  font-size: inherit;
   padding-bottom: 5px;
   width: 100%;
-  height: 200px;
+  height: auto;
+  min-height: 200px;
+  margin-top: -20px;
   margin-bottom: 15px;
   line-height: 1.5em;
   overflow-x: hidden;
 }
 
-/* line 165, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 180, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #editor2 {
   position: relative;
   font-size: .8em;
@@ -8065,24 +8548,41 @@ code {
   line-height: 1.5em;
 }
 
-/* line 177, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 192, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .tight-bottom {
   margin-bottom: -10px;
 }
 
+/* line 196, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+.edit-page {
+  color: #3879d9 !important;
+}
+/* line 198, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+.edit-page input {
+  border: 1px solid #3879d9;
+}
+/* line 201, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+.edit-page form {
+  color: #3879d9;
+}
+/* line 204, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+.edit-page textarea {
+  border: 1px solid #3879d9;
+}
+
 /*  footer  */
-/* line 183, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 211, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .footer {
   margin: 10px auto;
   text-align: center;
 }
 
-/* line 187, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 215, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .navbar ul li {
   display: inline;
 }
 
-/* line 190, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 218, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #footer {
   z-index: 5;
   height: 50px;
@@ -8092,118 +8592,118 @@ code {
   background-color: #e1e1e1;
   border-top: solid 1px #878787;
 }
-/* line 198, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 226, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #footer li {
   color: white;
 }
-/* line 202, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 230, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #footer a {
   color: #878787;
 }
 
-/* line 207, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 235, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #reset-button {
   display: none;
 }
 
-/* line 210, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 238, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #reset-button2 {
   display: none;
 }
 
-/* line 213, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 241, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #notice-correct {
   display: none;
   background-color: #00CC00;
 }
 
-/* line 217, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 245, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #alert-wrong {
   display: none;
   background-color: #FF0000;
 }
 
-/* line 221, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 249, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #notice-correct2 {
   display: none;
   background-color: #00CC00;
 }
 
-/* line 225, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 253, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #alert-wrong2 {
   display: none;
   background-color: #FF0000;
 }
 
-/* line 229, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 257, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #next {
   float: right;
 }
 
-/* line 233, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 261, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .active {
   color: white;
   background-color: #FF66FF;
 }
 
-/* line 237, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 265, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .inactive {
   background-color: #99FFFF;
   color: white;
 }
 
-/* line 244, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 272, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .float-left {
   float: left;
 }
 
-/* line 247, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 275, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .no-lesson {
   text-align: center;
   margin: 80px 0;
 }
 
-/* line 251, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 279, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .top-bar.expanded .toggle-topbar a span {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 255, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 283, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .bottom-div {
   height: 200px;
   width: 75%;
   margin: 0 auto;
 }
 
-/* line 261, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 289, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 body#users {
   background-color: #6b97b2;
 }
 
-/* line 264, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 292, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 body#lessons {
   background-color: #6b97b2;
 }
 
-/* line 267, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 295, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 body#sessions {
   background-color: #6b97b2;
 }
 
-/* line 270, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 298, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .icon-container {
   width: 75%;
   margin: 65px auto 50px auto;
 }
 
-/* line 274, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 302, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .author {
   color: #c66427;
 }
 
 /* footer */
-/* line 279, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 307, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #footer {
   position: absolute;
   bottom: 0;
@@ -8215,30 +8715,30 @@ body#sessions {
 }
 
 /* forms */
-/* line 291, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 319, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 293, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 321, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
-/* line 298, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 326, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .alert {
   color: red;
 }
 
-/* line 301, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 329, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .user-change {
   font-size: .8em;
 }
-/* line 303, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 331, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .user-change a {
   color: green;
 }
-/* line 306, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
+/* line 334, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/custom-style.css.scss */
 .user-change a:hover {
   color: red;
 }
@@ -8280,6 +8780,15 @@ margin-bottom: 0px;
 }
 .bottom-space {
 	margin-bottom: 50px;
+}
+
+ul.off-canvas-list li a {
+  display: block;
+  padding: 0.66667rem;
+  /*color: rgba(255, 255, 255, 0.7);*/
+  color: #da493a !important;
+  border-bottom: 1px solid #262626;
+  transition: background 300ms ease;
 }
 /* line 1, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/hidden_elements.css.scss */
 #editor-height {
@@ -8340,7 +8849,7 @@ margin-bottom: 0px;
 }
 /* line 19, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/input_pages.css.scss */
 .drk-bckgrnd input {
-  color: #c66427;
+  color: #6b97b2;
   border: 1px solid #6b97b2;
   background-color: transparent;
 }
@@ -8348,7 +8857,7 @@ margin-bottom: 0px;
 .drk-bckgrnd textarea {
   border: 1px solid #6b97b2;
   background-color: #2B2B2B;
-  color: #c66427;
+  color: #6b97b2;
 }
 /* line 28, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/input_pages.css.scss */
 .drk-bckgrnd textarea :focus {
@@ -8383,6 +8892,83 @@ margin-bottom: 0px;
 }
 
 /* line 58, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/input_pages.css.scss */
+.light-blue {
+  margin-top: -50px;
+  width: 100%;
+  height: 100%;
+  background-color: #6B97B2 !important;
+  color: #C66427 !important;
+}
+
+/* line 112, /Users/brentwoodreid/code/epicodus/homework/rails/sublime_learning/app/assets/stylesheets/input_pages.css.scss */
 .half-page {
   padding: 100px 0 50px 0;
+}
+/* Based on Sublime Text's Monokai theme */
+
+
+.cm-s-monokai.CodeMirror {background: #272822; color: #f8f8f2;}
+.cm-s-monokai div.CodeMirror-selected {background: #49483E !important;}
+.cm-s-monokai .CodeMirror-gutters {background: #272822; border-right: 0px;}
+.cm-s-monokai .CodeMirror-linenumber {color: #d0d0d0;}
+.cm-s-monokai .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+
+.cm-s-monokai span.cm-comment {color: #75715e;}
+.cm-s-monokai span.cm-atom {color: #ae81ff;}
+.cm-s-monokai span.cm-number {color: #ae81ff;}
+
+.cm-s-monokai span.cm-property, .cm-s-monokai span.cm-attribute {color: #a6e22e;}
+.cm-s-monokai span.cm-keyword {color: #f92672;}
+.cm-s-monokai span.cm-string {color: #e6db74;}
+
+.cm-s-monokai span.cm-variable {color: #a6e22e;}
+.cm-s-monokai span.cm-variable-2 {color: #9effff;}
+.cm-s-monokai span.cm-def {color: #fd971f;}
+.cm-s-monokai span.cm-bracket {color: #f8f8f2;}
+.cm-s-monokai span.cm-tag {color: #f92672;}
+.cm-s-monokai span.cm-link {color: #ae81ff;}
+.cm-s-monokai span.cm-error {background: #f92672; color: #f8f8f0;}
+
+.cm-s-monokai .CodeMirror-activeline-background {background: #373831 !important;}
+.cm-s-monokai .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+/* Based on Sublime Text's Railscasts theme */
+
+
+.cm-s-railscasts.CodeMirror {background: #2B2B2B; color: #f8f8f2;}
+.cm-s-railscasts div.CodeMirror-selected {background: #545D73 !important;
+																					-moz-border-radius: 3px;
+																					-webkit-border-radius: 3px;
+																					border-radius: 3px; 
+																					-khtml-border-radius: 3px;}
+.cm-s-railscasts .CodeMirror-gutters {background: #3B3B3B; border-right: 0px;}
+.cm-s-railscasts .CodeMirror-linenumber {color: #ffffff;}
+.cm-s-railscasts .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+
+.cm-s-railscasts span.cm-comment {color: #bc9457;}
+.cm-s-railscasts span.cm-atom {color: #6d9cbe;}
+.cm-s-railscasts span.cm-number {color: #ae81ff;}
+.cm-s-railscasts span.cm-operator {color: #cc7732;}
+
+.cm-s-railscasts span.cm-property, .cm-s-railscasts span.cm-attribute {color: #a6e22e;}
+.cm-s-railscasts span.cm-keyword {color: #cc7732;}
+.cm-s-railscasts span.cm-method {color: #ffffff;}
+
+.cm-s-railscasts span.cm-string {color: #a5c261;}
+.cm-s-railscasts .cm-string-2 {color: green;}
+
+.cm-s-railscasts span.cm-variable {color: #da493a;}
+.cm-s-railscasts span.cm-variable-2 {color: #d0d0ff;}
+.cm-s-railscasts span.cm-def {color: #ffc669;}
+.cm-s-railscasts span.cm-bracket {color: #f8f8f2;}
+.cm-s-railscasts span.cm-tag {color: #ffffff;}
+.cm-s-railscasts span.cm-link {color: #ae81ff;}
+.cm-s-railscasts span.cm-error {background: #f92672; color: #f8f8f0;}
+
+.cm-s-railscasts .CodeMirror-activeline-background {background: #232323 !important;}
+.cm-s-railscasts .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
 }
