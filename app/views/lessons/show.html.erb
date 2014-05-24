@@ -23,7 +23,7 @@
 
 			  <button id="editor-button" type="submit" class="">submit</button>
 			  <button id="reset-button" type="submit" class="">reset</button>
-				<%= link_to "next lesson", @lesson.next, id: "next", class: "button inactive" %>
+				<%= link_to "skip", @lesson.next, id: "next", class: "button inactive" %>
 			  <button id="notice-correct" type="reset" class="">
 			  	Good job! Wasn't that easy?
 			  </button>
@@ -49,8 +49,11 @@ $(document).ready(function() {
     theme : 'railscasts',
     keyMap: "sublime",
     tabSize: 2,
-    activeLine: true
+    activeLine: true,
+    showTrailingSpace: false
   });
+
+
 
 	$('#editor-button').click( function() {
 		$('#editor-button').hide();
@@ -64,6 +67,7 @@ $(document).ready(function() {
 		if (result == 0 ) {
 			$('#notice-correct').show();
 			$('#next').removeClass('inactive');
+			$('#next').text('next lesson');
 			$('#next').addClass('active');
 		} else {
 			$('#alert-wrong').show();
@@ -75,6 +79,5 @@ $(document).ready(function() {
 		$('#editor-button').show();
 		location.reload();
 	});
-
 });
 </script>
