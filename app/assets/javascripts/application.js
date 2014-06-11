@@ -16,6 +16,7 @@
 //= require mousetrap/global
 //= require mousetrap/dictionary
 //= require mousetrap/record 
+//= require keybindings
 //= require codemirror
 //= require active-line
 //= require ruby

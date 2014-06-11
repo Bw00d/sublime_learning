@@ -55,6 +55,11 @@ handleKeyBindings = ->
   Mousetrap.bind
     'ctrl+super+up': -> moveLinesUp()
     'ctrl+super+down': -> moveLinesDown()
+    Mousetrap.bind
+    'super+d': -> selectNext()
+    
+  Mousetrap.bindGlobal '4': -> alert('4 pressed')
+  
 
 recordSequence = () ->
   Mousetrap.record (sequence) ->

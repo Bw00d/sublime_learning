@@ -59,11 +59,11 @@ $(document).ready(function() {
 		$('#editor-button').hide();
 		$('#reset-button').show();
 		// editor = $("#lesson-text");
-		input = editor.getValue().trim();
-		answer = $('#answer-block').html().trim();
-		console.log(answer);
-		console.log(input);
-		result = answer.localeCompare(input);
+		var input = editor.getValue().trim();
+		var output = input.replace(/[^\S\r\n]+$/gm, "")
+		var answer = $('#answer-block').html().trim();
+		var last_answer = answer.replace(/[^\S\r\n]+$/gm, "")
+		var result = last_answer.localeCompare(output);
 		if (result == 0 ) {
 			$('#notice-correct').show();
 			$('#next').removeClass('inactive');
