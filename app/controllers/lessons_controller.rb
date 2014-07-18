@@ -29,12 +29,11 @@ class LessonsController < ApplicationController
 	end
 
 	def create
-		@lessons = Lesson.all
 		@lesson = Lesson.new(lessons_params)
 		if @lesson.save
-			render('lessons/index.html.erb')
+			redirect_to lessons_path
 		else
-			render('lessons/new.html.erb')
+			render 'new'
 		end
 	end
 
