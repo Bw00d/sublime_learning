@@ -5,11 +5,10 @@ class SessionsController < ApplicationController
   end
 
    def create
-    @lessons = Lesson.all
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
      sign_in user
-     redirect_to lesson_path(@lessons.first)
+     redirect_to lessons_path
     else
       flash.now[:error] = 'Invalid email/password combination'
       render 'new'
