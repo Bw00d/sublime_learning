@@ -23,7 +23,7 @@
 
 			  <button id="editor-button" type="submit" class="">submit</button>
 			  <button id="reset-button" type="submit" class="">reset</button>
-				<%= link_to "skip", @lesson.next, id: "next", class: "button inactive" %>
+				<%= link_to "skip", next_lesson_path(@lesson), id: "next", class: "button inactive" %>
 			  <button id="notice-correct" type="reset" class="">
 			  	Good job! Wasn't that easy?
 			  </button>

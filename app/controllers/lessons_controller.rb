@@ -20,21 +20,14 @@ class LessonsController < ApplicationController
 	def show
 		@lessons = Lesson.all
 		@lesson = Lesson.find(params[:id])
-		# if @lesson.next == nil
-			# render('lessons/no_lesson.html.erb')
-			# redirect_to lessons_thats_all_path
-		# else
-			# @lesson
-		# end
 	end
 
 	def create
-		@lessons = Lesson.all
 		@lesson = Lesson.new(lessons_params)
 		if @lesson.save
-			render('lessons/index.html.erb')
+			redirect_to lessons_path
 		else
-			render('lessons/new.html.erb')
+			render 'new'
 		end
 	end
 
@@ -60,6 +53,15 @@ class LessonsController < ApplicationController
     flash[:notice] = 'Lesson deleted.'
     redirect_to lessons_path
 	end
+
+  def next
+    next_lesson = Lesson.find(params[:id]).next
+    if next_lesson.present?
+      redirect_to lesson_path(next_lesson)
+    else
+      redirect_to lessons_thats_all_path
+    end
+  end
 
 private
 	def lessons_params
