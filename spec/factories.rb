@@ -8,10 +8,6 @@ FactoryGirl.define do
     editable_code "hello world"
     answer "hello world"
     line_number "1"
-    content2 "###Foo"
-    editable_code2 "hi world"
-    answer2 "hi"
-    line_number2 "1"
   end
 
   factory :user do
