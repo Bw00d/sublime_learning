@@ -4,8 +4,10 @@ class Lesson < ActiveRecord::Base
 	validates :number, presence: true
 	validates :content, presence: true									 
 	validates :answer, presence: true
-	validates :line_number, presence: true
+	validates :number, presence: true,
+	                        uniqueness: true
 	validates :editable_code, presence: true
+	validates :count, presence: true
 
 	def next
 		@lesson = Lesson.where(number: self.number + 1)

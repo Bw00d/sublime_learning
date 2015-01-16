@@ -3,6 +3,7 @@
 <%= render 'shared/navbar' %>
 
     <section class="main-section">
+    	<%= hidden_field_tag "count", @lesson.count, id: 'best-count' %>
 			<div class="large-9 large-centered columns lesson bottom-space">
 				<h1 id="lesson-name" class="center"><%= @lesson.name %></h1>
 				<div class="content">
@@ -10,7 +11,7 @@
 				</div>
 
 				<p id="answer-block">
-		<%= @lesson.answer %>
+					<%= @lesson.answer %>
 				</p>
 				<p id="line-number">
 					<%= @lesson.line_number %>
@@ -56,7 +57,7 @@ $(document).ready(function() {
     });
 
 	$('#submit-button').click( function() {
-		// $('#submit-button').hide();
+	  var bestCount = $('#best-count').val();
 		$('#reset-button').show();
 		// editor = $("#lesson-text");
 		var input = editor.getValue().trim();
@@ -66,7 +67,7 @@ $(document).ready(function() {
 		var result = last_answer.localeCompare(output);
 		if (result == 0 ) {
 			$('#submit-button').hide();
-			if (count < 5 ){
+			if (count < parseInt(bestCount) ){
 				// $('#notice-correct').append(" " + count + "clicks"); //counted strokes
 				$('#notice-correct').show();
 			} else {

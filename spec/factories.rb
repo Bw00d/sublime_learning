@@ -8,6 +8,7 @@ FactoryGirl.define do
     editable_code "hello world"
     answer "hello world"
     line_number "1"
+    count 10
   end
 
   factory :user do

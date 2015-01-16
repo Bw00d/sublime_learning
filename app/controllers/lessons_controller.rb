@@ -71,13 +71,9 @@ private
                                  :content,
                                  :editable_code,
                                  :answer,
-                                 :content2,
-                                 :editable_code2,
-                                 :answer2,
                                  :editor_height,
-                                 :editor_height2,
                                  :line_number,
-                                 :line_number2)
+                                 :count)
 	end
 	def correct_user
         @user = User.find(params[:id])
