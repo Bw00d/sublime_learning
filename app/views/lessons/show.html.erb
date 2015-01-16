@@ -21,15 +21,11 @@
 					</div>
 		
 
-			  <button id="editor-button" type="submit" class="">submit</button>
+			  <button id="submit-button" type="submit" class="">submit</button>
 			  <button id="reset-button" type="submit" class="">reset</button>
 				<%= link_to "skip", next_lesson_path(@lesson), id: "next", class: "button inactive" %>
-			  <button id="notice-correct" type="reset" class="">
-			  	Good job! Wasn't that easy?
-			  </button>
-			  <button id="alert-wrong" type="reset" class="">
-			  	Oops, not quite. Try using the short cut to fix the code.
-			  </button>
+
+			  <%= render "messages" %>
 				<div class="small-1 small-centered columns">
 					<p><a href="https://github.com/Bw00d"><%= image_tag "octocat-pinkface.png", id: "octocat-link", alt: "octocat-logo" %></a></p>
 				</div>
@@ -52,11 +48,15 @@ $(document).ready(function() {
     activeLine: true,
     showTrailingSpace: false
   });
+  // for counting strokes
+  var count = 0;
+  $('textarea').on('keyup',function(){
+     count++;
+      
+    });
 
-
-
-	$('#editor-button').click( function() {
-		$('#editor-button').hide();
+	$('#submit-button').click( function() {
+		// $('#submit-button').hide();
 		$('#reset-button').show();
 		// editor = $("#lesson-text");
 		var input = editor.getValue().trim();
@@ -65,7 +65,13 @@ $(document).ready(function() {
 		var last_answer = answer.replace(/[^\S\r\n]+$/gm, "")
 		var result = last_answer.localeCompare(output);
 		if (result == 0 ) {
-			$('#notice-correct').show();
+			$('#submit-button').hide();
+			if (count < 5 ){
+				// $('#notice-correct').append(" " + count + "clicks"); //counted strokes
+				$('#notice-correct').show();
+			} else {
+				$('#could-improve').show()
+			}
 			$('#next').removeClass('inactive');
 			$('#next').text('next lesson');
 			$('#next').addClass('active');
@@ -76,8 +82,9 @@ $(document).ready(function() {
 	$('#reset-button').click( function(event) {
 		event.preventDefault();
 		$('#reset-button').hide();
-		$('#editor-button').show();
+		$('#submit-button').show();
 		location.reload();
 	});
+	
 });
 </script>
