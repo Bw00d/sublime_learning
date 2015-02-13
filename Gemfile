@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
-gem 'rails'
+gem 'rails', '4.0.4'
 gem 'pg'
 gem "sass-rails"
 gem 'uglifier'
@@ -19,7 +19,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
-  gem 'pry-debugger'
+  gem 'pry-byebug'
 end
 
 group :test, :development do
