@@ -1,4 +1,8 @@
 SublimeLearning::Application.configure do
+
+  # Database url
+  ENV["DATABASE_URL"] = "postgres://gmfewpsojyhpdk:ZJadberSRRZu1h8e-dUg0z0xM_@ec2-54-204-27-119.compute-1.amazonaws.com:5432/d7ri2ee96bv5pv"
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
