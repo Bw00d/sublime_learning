@@ -5,6 +5,3 @@ require File.expand_path('../config/application', __FILE__)
 
 SublimeLearning::Application.load_tasks
 
-task :freedom do
-  Bundler.with_clean_env { sh "heroku" }
-end
