@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 
-/.env
+.env
 
 # Gemnasium gem configuration file
 config/gemnasium.yml
