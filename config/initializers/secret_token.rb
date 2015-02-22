@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SublimeLearning::Application.config.secret_key_base = 'c97189780b662329d872d3357960fa6922e81696a80f62c34a04e898de1aa936b3a81a849c9068f6ba8dd2288bc01f382258432afda062f92667f2534d852b69'
+SublimeLearning::Application.config.secret_key_base = ENV['SECRET_TOKEN']

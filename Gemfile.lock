@@ -61,6 +61,9 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.3.0)
     factory_girl (4.5.0)
@@ -185,6 +188,7 @@ DEPENDENCIES
   codemirror-rails
   coffee-rails
   database_cleaner
+  dotenv-rails
   factory_girl_rails
   foundation-rails
   jquery-rails
