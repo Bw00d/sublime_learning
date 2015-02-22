@@ -17,4 +17,4 @@
 
 # Gemnasium gem configuration file
 config/gemnasium.yml
-/db/migrate/seeds
+/db/migrate/seeds.rb
