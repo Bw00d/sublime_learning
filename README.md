@@ -1,11 +1,11 @@
-##Sublime Learning in Rails!
+## Sublime Learning in Rails!
 <a href="https://codeclimate.com/github/Bw00d/sublime_learning">![Code Climate](https://codeclimate.com/github/Bw00d/sublime_learning.png)</a>
 
-###Epicodus "Build anything you want" exercise.
+### Epicodus "Build anything you want" exercise.
 
 This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a continuation of my pogress with the <a href="https://github.com/Bw00d/Epicodus-clone">Epicodus_clone</a> exercise.
 
-####Status
+#### Status
 
 * I am able to create lessons.  Each lesson has a name, chapter id, content(which is inputted as markdown and retrieved with the <a href="https://github.com/vmg/redcarpet">redcarpet</a> gem so it can be styled), an editable code block(also markdown), and an answer code block which will be used to compare the result of the user input.
 * The <a heref="">ace editor</a> is embedded and will allow the user to practice editing the editable code block.
@@ -15,7 +15,7 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * User authentication and validation complete.
 
 
-####Todo
+#### Todo
 
 * Make a consolidated js file of all the relevant key bindings.
 * I plan to use the <a href="https://github.com/kugaevsky/mousetrap-rails">mousetrap-rails</a> gem to record the users keystrokes to test for efficient editing.
@@ -23,12 +23,12 @@ This is an application for practicing Sublime Text 2 keyboard shortcuts. It is a
 * Set editor height for each lesson
 * DRY up code so admin can add editors to code as necessary instead of having two editors per lesson.  
 
-####Issues
+#### Issues
 
 * So far attempts to change the height of the editor for each lesson have caused the syntax highlighting to disappear and have had no effect on the editor height.
 * I had to write all the editor js files directly into the lesson show page so that I don't get js console error that disable the offcanvas on pages other than the lesson show page. I have experimented with loading the js several different ways but I don't fully understand how the asset pipeline is loading the files. This is also preventing me from hosting the ace.js file locally.
 
-####Usage
+#### Usage
 
 It is easy to get started building lessons. There is no new lesson link so navigate to the lessons/new to create a new lesson. At this time there is also no authentication to worry about. 
 
@@ -38,7 +38,7 @@ The content, editable_code, and answer <strong>must</strong> be entered as markd
 
 The edited code and the answer have to be exactly the same to past the test. 
 
-####Keybindings
+#### Keybindings
 **Note** Currently keybindings only work on Mac. I will update with Windows keybings soon.
 * delete line :  shft+ctrl+k
 * delete to end of line : ctrl+k
